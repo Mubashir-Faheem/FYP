@@ -1,0 +1,44 @@
+const users=[
+    {
+        email:"admin@admin.com",
+        password:123
+    },
+    {
+        email:"mubashir@admin.com",
+        password:123
+    },
+    {
+        email:"misbah@admin.com",
+        password:123
+    },
+    {
+        email:"mustafa@admin.com",
+        password:123
+    },
+    {
+        email:"admin@admin.com",
+        password:123
+    },
+    {
+        email:"admin@admin.com",
+        password:123
+    },
+    {
+        email:"admin@admin.com",
+        password:123
+    },
+    {
+        email:"admin@admin.com",
+        password:123
+    },
+    {
+        email:"admin@admin.com",
+        password:123
+    },
+    {
+        email:"me@me.com",
+        password:123
+    },
+
+
+]
