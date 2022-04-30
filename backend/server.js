@@ -3,6 +3,7 @@
 const express=require ('express');
 // const {products}=require ("./data/products");
 const products=require ("./data/products");
+const productRoutes=require('./routes/productsRoute')
 const dotenv=require("dotenv");
 require('dotenv').config()
 dotenv.config();
@@ -22,24 +23,13 @@ app.get("/",(req,res)=>{
 res.send("<h1>Welcome to node server</h1>");
 });
 
-
+app.use("/api",productRoutes);
 
 app.get("/",(req,res)=>{
     res.send("<h1>Node app</h1>");
 
 });
-app.get("/products",(req,res)=>{
-    res.json(products);
-});
 
-app.get("/products/:id",(req,res)=>{
-//      let {id}=useParam();
-    const product=products.find((p)=>p._id===req.params.id);
-// //     const product=product.find((p)=>p._id===id);
-    res.json(product);
-
-
-})
 // app.get('/product/:id', function(req, res) { // url: /path/test
 //     console.log(req.params.id);  // result: test
 //   });
