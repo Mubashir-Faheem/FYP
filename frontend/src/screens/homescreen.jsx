@@ -4,6 +4,7 @@ import axios from 'axios'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import Products from "./../products"
+// import Products from "./../../../backend/data/products"
 import ProductScreen from './ProductScreen' 
 
 
@@ -18,16 +19,16 @@ import ProductScreen from './ProductScreen'
     //     console.log("dsfsdfsd");
     //   });
 const HomeScreen=()=>{
-    // const [Products,setProducts]=useState([]);
-    // useEffect(()=>{
-    //     const fetchProducts=async () => {
-    //         const {data}=await axios.get('/products');
-    //         setProducts(data);
-    //     }
-    //     fetchProducts();
-    // },[]);
+    const [Products,setProducts]=useState([]);
+    useEffect(()=>{
+        const fetchProducts=async () => {
+            const {data}=await axios.get('/api/products');
+            setProducts(data);
+        }
+        fetchProducts();
+    },[]);
 
-// }
+//}
     return (
         <>
 

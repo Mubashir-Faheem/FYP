@@ -1,10 +1,3 @@
-import React from "react"
+// // import React from "react"
 
-const Fertilizerscreen = () => {
-  return (
-      <>
-<h1>This is Fertilizers screen</h1>
-</>
-  )
-}
-export default Fertilizerscreen
+// export default Fertilizerscreen
