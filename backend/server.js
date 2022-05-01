@@ -1,6 +1,7 @@
 // const param=require("react-router-dom")
 // import {useParams} from "react-router-dom"
 const express=require ('express');
+const cors=require ('cors')
 // const {products}=require ("./data/products");
 const products=require ("./data/products");
 const productRoutes=require('./routes/productsRoute')
