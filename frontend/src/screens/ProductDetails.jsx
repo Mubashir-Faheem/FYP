@@ -14,7 +14,7 @@ import Card from "react-bootstrap/Card"
 const[Product1,setProduct]=useState([]);
 useEffect(()=>{
     const fetchProduct=async ()=>{
-        const{data}=await axios.get(`/api/products/${match.id}`);
+        const{data}=await axios.get(`https://mubashir-garden-mart.herokuapp.com/api/products/${match.id}`);
         setProduct(data);
     };
 },[]);

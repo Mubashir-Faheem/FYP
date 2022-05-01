@@ -19,7 +19,7 @@ connectDb(); //connecting to mongodb
 // var param=express.useParam();
 // const { uuid } = require('uuidv4');
 const app= express();
-
+app.use(cors());
 
 //dotenv config
 // dotenv.config();

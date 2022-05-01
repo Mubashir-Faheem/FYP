@@ -22,8 +22,10 @@ const HomeScreen=()=>{
     const [Products,setProducts]=useState([]);
     useEffect(()=>{
         const fetchProducts=async () => {
-            const {data}=await axios.get('/api/products');
-            setProducts(data);
+            // const {data}=await axios.get('https://mubashir-garden-mart.herokuapp.com/api/products');
+            const resp=await axios.get('https://mubashir-garden-mart.herokuapp.com/api/products');
+            console.log(resp);
+            setProducts(resp.data);
         }
         fetchProducts();
     },[]);
