@@ -70,7 +70,7 @@ const seeds=[
 
 },
 {
-    name:"Sponge Gourd",
+    name:"Pics/Songe Gourd",
     image:'images/SpongeGourdSeeds.jpeg',
     description:"Excellent product for control of mosquito",
     price:"Rs.950",

@@ -5,6 +5,8 @@ import {Link} from "react-router-dom"
 // import Product from "..products/"
 // import {Image} from "react-bootstrap"
 
+
+
 const ProductScreen = ({product}) => {
     return (
       
@@ -47,5 +49,9 @@ const ProductScreen = ({product}) => {
         </>
     )
 }
+
+
+
+
 
 export default ProductScreen

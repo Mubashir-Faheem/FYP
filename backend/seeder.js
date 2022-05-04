@@ -9,7 +9,6 @@ const Seed=require('./models/SeedModel')
 const Review =require('./models/ReviewModel')
 const products=require('./data/products')
 const fertilizers=require('./data/fertilizers')
-
 const seeds=require('./data/seeds')
 // const connectDB=require('./config/config');
 const connectDb = require('./config/config');

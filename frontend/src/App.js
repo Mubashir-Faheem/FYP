@@ -8,13 +8,14 @@ import Footer from "./components/footer"
 import Header from "./components/header"
 import Homescreen from "./screens/homescreen"
 import {BrowserRouter as Router, Route,Routes} from "react-router-dom"
+import ProductScreen from "./screens/ProductScreen"
 import ProductDetails from "./screens/ProductDetails"
 import Login from "./screens/Login/Login"
 import Register from './screens/Register'
 import Forget from './screens/Forget';
 import Main from './screens/Main'
 import SeedDetails from './screens/SeedDetails';
-import SeedScreen from './screens/SeedScreen';
+// import SeedScreen from './screens/SeedScreen';
 import Post from './screens/Blog/Post'
 import Posts from './screens/Blog/Posts';
 import Topbar from './screens/Blog/Topbar';
@@ -56,7 +57,8 @@ function App() {
       <Route path="/" element={<Main />} exact/>
 
       <Route path="/homescreen" element={<Homescreen />} />
-      <Route path="/seedscreen" element={<SeedScreen />} />
+      {/* <Route path="/ProductScreen" element={<ProductScreen />} /> */}
+      {/* <Route path="/seedscreen" element={<SeedScreen />} /> */}
       <Route path="/fertscreen" element={<Fertilizerscreen />} />
       <Route path="/posts" element={<Posts/>} />
       <Route path="/post" element={<Post/>} />

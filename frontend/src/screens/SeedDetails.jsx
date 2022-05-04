@@ -1,12 +1,13 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import Product from "../products"
+import Seed from "../seeds"
 import {Row,Col,ListGroup,Button,Image, ListGroupItem} from 'react-bootstrap'
 import {useParams} from "react-router-dom"
 import Rating from '../components/Rating'
 import { Link } from 'react-router-dom'
 import Card from "react-bootstrap/Card"
-import Seed from '../seeds'
+// import Seed from '../seeds'
 
     const SeedDetails = ({match}) => {
         let {id}=useParams();
@@ -15,15 +16,16 @@ import Seed from '../seeds'
 const[Seed1,setSeed]=useState([]);
 useEffect(()=>{
     const fetchSeed=async ()=>{
-        const{data}=await axios.get(`/seeds/${match.id}`);
+        const{data}=await axios.get(`https://mubashir-garden-mart.herokuapp.com/api/seeds/${match.id}`);
         setSeed(data);
+        console.log(data)
     };
 },[]);
   
     return (
         
         <div>
-            <Link to="/" className="btn btn-dark">
+            <Link to="/homescreen" className="btn btn-dark">
                 <i class="fas fa-arrow-left"></i> &nbsp; Go Back
         </Link>
             <Row>

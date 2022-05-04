@@ -72,6 +72,8 @@ useEffect(()=>{
         </div>
     )
     
+    
 }
 
 export default ProductDetails
+

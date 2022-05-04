@@ -2,7 +2,7 @@ const products =[
     {
     
     name:"Mint Plant",
-    image:'images/mint.jpg',
+    image:'images/Mint.jpeg',
     description:"Beautiful Mint Plant",
     price:"Rs.950",
     countinstock:25,
