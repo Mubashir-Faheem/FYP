@@ -1,7 +1,7 @@
 const products =[
     {
     
-    name:"Mint Plant",
+    name:"Mintttt Plant",
     image:'images/Mint.jpeg',
     description:"Beautiful Mint Plant",
     price:"Rs.950",
