@@ -3,6 +3,7 @@
 const express=require ('express');
 const cors=require ('cors')
 // const {products}=require ("./data/products");
+const {errorHandler}=require("./middlewares/errorMiddleware")
 const products=require ("./data/products");
 const productRoutes=require('./routes/productsRoute')
 const fertilizerRoutes=require('./routes/fertilizersRoute')
@@ -31,6 +32,7 @@ res.send("<h1>Welcome to node server</h1>");
 app.use("/api",productRoutes);
 app.use("/api",fertilizerRoutes)
 app.use("/api",seedRoutes)
+app.use(errorHandler);
 
 app.get("/",(req,res)=>{
     res.send("<h1>Node app</h1>");
