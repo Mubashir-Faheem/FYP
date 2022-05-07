@@ -1,8 +1,8 @@
 const products =[
     {
     
-    name:"Mintttt Plant",
-    image:'images/Mint.jpeg',
+    name:"Minttttss Plant",
+    image:'images/mint.jpg',
     description:"Beautiful Mint Plant",
     price:"Rs.950",
     countinstock:25,
@@ -13,7 +13,7 @@ const products =[
 {
 
     name:"Bell Pepper Plant",
-    image:'images/bell pepper.jpg',
+    image:'images/bellpepper.jpg',
     description:"Beautiful Bell Pepper Plant",
     price:"Rs.550",
     countinstock:25,
@@ -43,7 +43,7 @@ const products =[
         {
             
                 name:"Green Chilli Plant",
-                image:'images/green chilli.jpg',
+                image:'images/greenchilli.jpg',
                 description:"Beautiful Green Chilli Plant",
                 price:"Rs.550",
                 countinstock:25,

@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
+// import Product from "../products"
 import Product from "../products"
 import {Row,Col,ListGroup,Button,Image, ListGroupItem} from 'react-bootstrap'
 import {useParams} from "react-router-dom"
@@ -29,7 +30,7 @@ useEffect(()=>{
     <Col md={6}>
         {/* <Image src={product.image} alt={product.name} /> */}
         <Card.Img variant="top" src={`../${product.image}` }  />
-    </Col>
+    </Col> 
     <Col md={3}>
         <ListGroup variant="flush">
             <ListGroupItem>

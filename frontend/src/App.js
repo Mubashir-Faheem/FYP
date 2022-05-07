@@ -7,8 +7,9 @@ import React from 'react'
 import Footer from "./components/footer"
 import Header from "./components/header"
 import Homescreen from "./screens/homescreen"
+// import {ProductShow} from "./screens/ProductScreen"
 import {BrowserRouter as Router, Route,Routes} from "react-router-dom"
-import ProductScreen from "./screens/ProductScreen"
+// import ProductScreen from "./screens/ProductScreen"
 import ProductDetails from "./screens/ProductDetails"
 import Login from "./screens/Login/Login"
 import Register from './screens/Register'
