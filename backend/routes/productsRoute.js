@@ -10,7 +10,7 @@ const productrouter=express.Router();
 //     res.json(products);
 // })
 // );
-productrouter.get("/products.js",asyncHandler(async(req,res)=>{
+productrouter.get("/products",asyncHandler(async(req,res)=>{
     const products=await Product.find({});
     res.json(products);
 })
@@ -26,7 +26,7 @@ productrouter.get("/products.js",asyncHandler(async(req,res)=>{
 // });
 
 //routing for single product
-productrouter.get("/products.js/:id",asyncHandler(async(req,res)=>{
+productrouter.get("/products/:id",asyncHandler(async(req,res)=>{
     const product=await Product.findById(req.params.id);
     if(product){
         res.json(product);
