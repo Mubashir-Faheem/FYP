@@ -41,13 +41,14 @@
 
 
 import React, {useState,useEffect} from 'react';
+import {useDispatch,useSelector} from 'react-redux';
 import axios from 'axios'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
-import Products from "./../products"
+// import Products from "./../products"
 // import Products from "./../../../backend/data/products"
 import ProductScreen from './ProductScreen' 
-
+import {listProducts} from '../actions/productActions'
 
 //  function HomeScreen(){
     
@@ -62,30 +63,39 @@ import ProductScreen from './ProductScreen'
 
 
 const HomeScreen=()=>{
-    const [Products,setProducts]=useState([]);
+    // const [Products,setProducts]=useState([]);
+    const dispatch=useDispatch();
+    const productList=useSelector(state =>state.productList);
+    const {loading,error,products}=productList;
+    
     useEffect(()=>{
-        const fetchProducts=async () => {
-            // const {data}=await axios.get('https://mubashir-garden-mart.herokuapp.com/api/products');
-            const resp=await axios.get('https://mubashir-garden-mart.herokuapp.com/api/products');
-            // const resp1=await axios.get('https://mubashir-garden-mart.herokuapp.com/api/seeds');
-            console.log(resp);
-            setProducts(resp.data);
-            // setProducts(resp1.data)
-        }
-        fetchProducts();
+        dispatch(listProducts());
+
+        // const fetchProducts=async () => {
+        //     // const {data}=await axios.get('https://mubashir-garden-mart.herokuapp.com/api/products');
+        //     const resp=await axios.get('https://mubashir-garden-mart.herokuapp.com/api/products');
+        //     // const resp1=await axios.get('https://mubashir-garden-mart.herokuapp.com/api/seeds');
+        //     console.log(resp);
+        //     setProducts(resp.data);
+        //     // setProducts(resp1.data)
+        // }
+        // fetchProducts();
+
     },[]);
+    
 
 //}
     return (
         <>
-
+        {
+            loading ? <h2>Loading </h2> :error ?  <h2>{error}</h2>:
             <Row>
 
           
 
                 {
                     
-                   Products.map(product =>(
+                    products.map(product =>(
                        <Col key={product._id} md={4}>
                        <h3>
                            <ProductScreen product={product}/>
@@ -94,6 +104,8 @@ const HomeScreen=()=>{
                    ))
                 }
             </Row>
+         } 
+
         </>
     )
 }

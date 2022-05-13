@@ -23,14 +23,14 @@ const ProductScreen = ({product}) => {
         </div> 
         
              <Card style={{ width: '18rem' }}>
-                 <Link to={`/product/${product._id}`}> 
+                 <Link to={`https://mubashir-garden-mart.herokuapp.com/api/products/${product._id}`}> 
   {/* <Card.Img variant="top" src={"./images/rose.jpg"} /> */}
   <Card.Img variant="top" src={`../${product.image}`} />
 
   </Link>
   
   <Card.Body>
-  <Link to={`/product/${product._id}`}>
+  <Link to={`https://mubashir-garden-mart.herokuapp.com/api/products/${product._id}`}>
     <Card.Title as="div">
         <strong>
         {product.name}
