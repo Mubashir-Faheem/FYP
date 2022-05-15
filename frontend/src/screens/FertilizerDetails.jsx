@@ -9,32 +9,32 @@ import {useParams} from "react-router-dom"
 import Rating from '../components/Rating'
 import { Link } from 'react-router-dom'
 import Card from "react-bootstrap/Card"
-import {listSeedDetails} from '../actions/seedActions'
+import {listFertilizerDetails} from '../actions/fertilizerAction'
 import Loader from '../components/shared/loader'
 import Message from '../components/shared/message'
 // import {useParams} from 'react-router-dom'
 
 
-    const SeedDetails = () => {
+    const FertilizerDetails = () => {
         let {id}=useParams();
         // const product=Product.find((p)=>p._id===id)
     const dispatch =useDispatch();
-    const seedDetails=useSelector(state =>state.seedDetails)
-    const{loading,error,seed} =seedDetails
-    // const[seed,setSeed]=useState([]);
+    const fertilizerDetails=useSelector(state =>state.fertilizerDetails)
+    const{loading,error,fertilizer} =fertilizerDetails
+    // const[fertilizer,setFertilizer]=useState([]);
 useEffect(()=>{
 
     // let {id}=useParams();
     console.log("he",id)
-    // const fetchProduct=async ()=>{
+    // const fetchFertilizer=async ()=>{
     //     // const{data}=await axios.get(`/products:id/${match.id}`);
-    //     const{data}=await axios.get(`/seeds/${useParams.id}`)
-    //     setSeed(data);
+    //     const{data}=await axios.get(`/fertilizers/${useParams.id}`)
+    //     setFertilizer(data);
     // };
-    // fetchProduct()
-    // console.log(seed)
+    // fetchFertilizer()
+    // console.log(fertilizer)
     // console.log("hello world",useParams.id)
-    dispatch(listSeedDetails(id))
+    dispatch(listFertilizerDetails(id))
 },[dispatch]);
   
     return (
@@ -56,7 +56,7 @@ useEffect(()=>{
                 <Card className="my-3 p-3 rounded">
 
             {/* <Image src={product &&product.image} alt={product && product.name} /> */}
-            <Card.Img variant="top" src={`../${seed && seed.image}` }  />
+            <Card.Img variant="top" src={`../${fertilizer && fertilizer.image}` }  />
             </Card> 
         </Col>
         
@@ -64,20 +64,20 @@ useEffect(()=>{
         <Card className="my-3 p-3 rounded">
             <ListGroup variant="flush">
                 <ListGroupItem>
-                    <h3>{seed && seed.name}</h3>
+                    <h3>{fertilizer && fertilizer.name}</h3>
                 </ListGroupItem>
     
                 <ListGroupItem>
-                    <Rating value={seed && seed.ratings}
-                    text={`${seed && seed.numreviews} Reviews`}/>
+                    <Rating value={fertilizer && fertilizer.ratings}
+                    text={`${fertilizer && fertilizer.numreviews} Reviews`}/>
     
                     
                 </ListGroupItem>
                 <ListGroupItem>
-                    Price: {seed &&seed.price}
+                    Price: {fertilizer &&fertilizer.price}
                     </ListGroupItem>
                     <ListGroupItem>
-                        {seed &&seed.description}
+                        {fertilizer &&fertilizer.description}
                     </ListGroupItem>
                 </ListGroup>
                 </Card>
@@ -88,7 +88,7 @@ useEffect(()=>{
             <ListGroupItem>
                 <Row>
                     <Col>Status:</Col>
-                    <Col>{seed &&seed.countinstock > 0? "In Stock": "Out of Stock" }</Col>
+                    <Col>{fertilizer &&fertilizer.countinstock > 0? "In Stock": "Out of Stock" }</Col>
                 </Row>
                 </ListGroupItem>
                 <ListGroupItem>
@@ -103,7 +103,7 @@ useEffect(()=>{
                     </Row>
                 
             </div>
-               )}
+                 )}
             
              </>
 
@@ -115,4 +115,4 @@ useEffect(()=>{
     
 };
 
-export default SeedDetails
+export default FertilizerDetails

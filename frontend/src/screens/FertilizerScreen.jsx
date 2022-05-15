@@ -13,7 +13,7 @@ import {Link} from "react-router-dom"
 
 
 
-const SeedScreen = ({seed}) => {
+const FertilizerScreen = ({fertilizer}) => {
     return (
       
         <>
@@ -25,27 +25,27 @@ const SeedScreen = ({seed}) => {
         </div> 
         <Card className="my-3 p-3 rounded">
              {/* <Card style={{ width: '18rem' }}> */}
-                 <Link to={`/seeds/${seed && seed._id}`}> 
+                 <Link to={`/fertilizers/${fertilizer && fertilizer._id}`}> 
   {/* <Card.Img variant="top" src={"./images/rose.jpg"} /> */}
-  <Card.Img variant="top" src={`../${seed && seed.image}`} />
+  <Card.Img variant="top" src={`../${fertilizer && fertilizer.image}`} />
 
   </Link>
   
   <Card.Body>
-  <Link to={`/seeds/${seed &&seed._id}`}>
+  <Link to={`/fertilizers/${fertilizer &&fertilizer._id}`}>
     <Card.Title as="div">
         <strong>
-        {seed && seed.name}
+        {fertilizer && fertilizer.name}
         </strong></Card.Title></Link>
     <Card.Text as="div">
       
-         <Rating value={seed && seed.rating} text={`${seed && seed.numreviews} reviews`}/>
+         <Rating value={fertilizer && fertilizer.rating} text={`${fertilizer && fertilizer.numreviews} reviews`}/>
 
       
     </Card.Text>
     <Card.Text as="div">
       <div className="my-3">
-          {seed && seed.price} 
+          {fertilizer && fertilizer.price} 
 
       </div>
     </Card.Text>
@@ -58,7 +58,7 @@ const SeedScreen = ({seed}) => {
 
 
 
-export default SeedScreen
+export default FertilizerScreen
 
 
 
