@@ -25,27 +25,27 @@ const ProductScreen = ({product}) => {
         </div> 
         <Card className="my-3 p-3 rounded">
              {/* <Card style={{ width: '18rem' }}> */}
-                 <Link to={`/product/${product._id}`}> 
+                 <Link to={`/product/${product && product._id}`}> 
   {/* <Card.Img variant="top" src={"./images/rose.jpg"} /> */}
-  <Card.Img variant="top" src={`../${product.image}`} />
+  <Card.Img variant="top" src={`../${product &&product.image}`} />
 
   </Link>
   
   <Card.Body>
-  <Link to={`/product/${product._id}`}>
+  <Link to={`/product/${product &&product._id}`}>
     <Card.Title as="div">
         <strong>
-        {product.name}
+        {product &&product.name}
         </strong></Card.Title></Link>
     <Card.Text as="div">
       
-         <Rating value={product.rating} text={`${product.numreviews} reviews`}/>
+         <Rating value={product &&product.rating} text={`${product &&product.numreviews} reviews`}/>
 
       
     </Card.Text>
     <Card.Text as="div">
       <div className="my-3">
-          {product.price} 
+          {product &&product.price} 
 
       </div>
     </Card.Text>
