@@ -1,6 +1,6 @@
-import React,{useEffect} from 'react'
+import React,{useState,useEffect} from 'react'
 import {useDispatch,useSelector} from 'react-redux'
-// import axios from 'axios'
+import axios from 'axios'
 // import Product from "../products"
 // import Product from "../products"
 // import Product from "../../../backend/data/products"
@@ -25,9 +25,9 @@ useEffect(()=>{
 
     // let {id}=useParams();
     console.log("he",id)
-    // const fetchProduct=async ()=>{
+    // const fetchProduct=async ({})=>{
     //     // const{data}=await axios.get(`/products:id/${match.id}`);
-    //     const{data}=await axios.get(`/products/${match.params.id}`)
+    //     const{data}=await axios.get(`/products/${id}`)
     //     setProduct(data);
     // };
     // fetchProduct()

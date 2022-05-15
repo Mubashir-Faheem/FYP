@@ -4,10 +4,19 @@ import {createStore} from 'redux'
 import {combineReducers,applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import {composeWithDevTools} from 'redux-devtools-extension';
-import {productListReducer} from './reducers/ProductReducer'
+import {productDetailsReducer, productListReducer} from './reducers/ProductReducer'
+import {seedListReducer,seedDetailsReducer} from './reducers/SeedReducer'
+import {fertilizerListReducer,fertilizerDetailsReducer} from './reducers/FertilizerReducer'
+
 
 const reducer=combineReducers({
-    productList:productListReducer 
+    productList:productListReducer,
+    productDetails:productDetailsReducer,
+    seedList:seedListReducer,
+    seedDetails:seedDetailsReducer,
+    fertilizerList:fertilizerListReducer,
+    fertilizerDetails:fertilizerDetailsReducer
+
 });
 const initialState={};
 const middleware=[thunk];
