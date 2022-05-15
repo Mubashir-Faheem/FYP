@@ -10,7 +10,7 @@ const footer = () => {
             <Container>
                 <Row>
                     <Col md='12' className="text-center">
-                        <span >Copyright &copy; Team Kitchen Garden</span>
+                        <span >Copyright &copy; Team Garden Mart</span>
                     
                     </Col>
                 </Row>

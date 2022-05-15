@@ -1,7 +1,7 @@
 const seeds=[
     {
     name:"Bitter Gourd ",
-    image:'images/BitterGourdSeeds.jpeg',
+    image:'images/mint.jpg',
     description:"Excellent product for control of mosquito",
     price:"Rs.950",
     countinstock:25,
@@ -11,7 +11,7 @@ const seeds=[
     },
     {
     name:"Bitter Gourd Long ",
-    image:'images/BitterGourdLngSeeds.jpeg',
+    image:'images/mint.jpg',
     description:"Excellent product for control of mosquito",
     price:"Rs.950",
     countinstock:25,
@@ -21,7 +21,7 @@ const seeds=[
     },
     {
     name:"Long Melon",
-    image:'images/LongMelonSeeds.jpeg',
+    image:'images/mint.jpg',
     description:"Excellent product for control of mosquito",
     price:"Rs.950",
     countinstock:25,
@@ -31,7 +31,7 @@ const seeds=[
     },
     {
     name:"Melon",
-    image:'images/MelonSeeds.jpeg',
+    image:'images/mint.jpg',
     description:"Excellent product for control of mosquito",
     price:"Rs.950",
     countinstock:25,
@@ -41,7 +41,7 @@ const seeds=[
         },
 {
     name:"Okra",
-    image:'images/OkraSeeds.jpg',
+    image:'images/mint.jpg',
     description:"Excellent product for control of mosquito",
     price:"Rs.950",
     countinstock:25,
@@ -51,7 +51,7 @@ const seeds=[
 
     {
     name:"Pumpkin",
-    image:'images/PumpkinSeeds.jpeg',
+    image:'images/mint.jpg',
     description:"Excellent product for control of mosquito",
     price:"Rs.950",
     countinstock:25,
@@ -61,7 +61,7 @@ const seeds=[
 },
 {
     name:"Snap Melon",
-    image:'images/SnapMelonSeeds.jpeg',
+    image:'images/mint.jpg',
     description:"Excellent product for control of mosquito",
     price:"Rs.950",
     countinstock:25,
@@ -71,7 +71,7 @@ const seeds=[
 },
 {
     name:"Pics/Songe Gourd",
-    image:'images/SpongeGourdSeeds.jpeg',
+    image:'images/mint.jpg',
     description:"Excellent product for control of mosquito",
     price:"Rs.950",
     countinstock:25,

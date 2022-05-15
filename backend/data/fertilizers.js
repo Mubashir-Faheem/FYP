@@ -2,7 +2,7 @@ const fertilizers=[
     {
         
     name:"Marshal Pesticide",
-    image:'images/Marshal.jpg',
+    image:'images/mint.jpg',
     description:"Excellent product for control of mosquito",
     price:"Rs.950",
     countinstock:25,
@@ -12,7 +12,7 @@ const fertilizers=[
     {
                                     
         name:"Agro Power",
-        image:'images/AgroPower.jpeg',
+        image:'images/mint.jpg',
         description:"100% dissolvable in water",
         price:"Rs.550",
         countinstock:25,
@@ -22,7 +22,7 @@ const fertilizers=[
     {
                                     
         name:"Choker",
-        image:'images/Choker.jpeg',
+        image:'images/mint.jpg',
         description:"Posionous..Kills germs",
         price:"Rs.550",
         countinstock:25,
@@ -32,7 +32,7 @@ const fertilizers=[
     {
                                     
         name:"Emamectin",
-        image:'images/Emamectin.jpeg',
+        image:'images/mint.jpg',
         description:"Benzoate,kills germs to full extent",
         price:"Rs.550",
         countinstock:25,
@@ -42,7 +42,7 @@ const fertilizers=[
     {
                                     
         name:"Imidacloprid",
-        image:'images/Imidacloprid.jpeg',
+        image:'images/mint.jpg',
         description:"Posionous,to be used carefully",
         price:"Rs.550",
         countinstock:25,
@@ -52,7 +52,7 @@ const fertilizers=[
     {
                                     
         name:"Lambda",
-        image:'images/Lambda.jpeg',
+        image:'images/mint.jpg',
         description:"Hell for insects",
         price:"Rs.550",
         countinstock:25,
@@ -62,7 +62,7 @@ const fertilizers=[
     {
                                     
         name:"Ranger",
-        image:'images/Ranger.jpeg',
+        image:'images/mint.jpg',
         description:"Spray against dengue and malaria",
         price:"Rs.550",
         countinstock:25,

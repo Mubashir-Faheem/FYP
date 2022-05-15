@@ -22,10 +22,15 @@ import Posts from './screens/Blog/Posts';
 import Topbar from './screens/Blog/Topbar';
 // import SearchBar from './screens/Blog/SearchBar';
 import SinglePost from './screens/Blog/SinglePost';
-import Fertilizerscreen from './screens/FertScreen';
+import Fertilizerscreen from './screens/FertilizerScreen';
 import Forum from './screens/Forum';
 import Video from './screens/Videos';
 import VirtualGarden from './screens/Vg';
+// import SeedScreen from './screens/SeedScreen';
+import SeedHome from './screens/SeedHome'
+import FertilizerHome from './screens/FertilizerHome';
+import FertilizerDetails from './screens/FertilizerDetails'
+
 // import Cart from './screens/Cart'
 // import StateProvider from './StateProvider'
 // import  CCartContextProvider from './Contexts/CartContext'
@@ -54,19 +59,25 @@ function App() {
     {/* <SeedScreen/> */}
     {/* <Blog/> */}
     {/* <Fertilizerscreen/> */}
+    {/* <SeedHome/> */}
+    {/* <FertilizerHome/> */}
+    {/* <FertilizerDetails/> */}
       <Routes >
       <Route path="/" element={<Main />} exact/>
 
       <Route path="/homescreen" element={<Homescreen />} />
       {/* <Route path="/ProductScreen" element={<ProductScreen />} /> */}
       {/* <Route path="/seedscreen" element={<SeedScreen />} /> */}
-      <Route path="/fertscreen" element={<Fertilizerscreen />} />
+      <Route path="/seedscreen" element={<SeedHome />} />
+      {/* <Route path="/fertscreen" element={<Fertilizerscreen />} /> */}
+      <Route path="/fertscreen" element={<FertilizerHome />} />
       <Route path="/posts" element={<Posts/>} />
       <Route path="/post" element={<Post/>} />
       <Route path="/topbar" element={<Topbar/>} />
       <Route path="/SinglePost" element={<SinglePost/>} />
       <Route path="/product/:id" element ={<ProductDetails />} />
-      <Route path="/seed/:id" element ={<SeedDetails />} />
+      <Route path="/seeds/:id" element ={<SeedDetails />} />
+      <Route path="/fertilizers/:id" element ={<FertilizerDetails />} />
       <Route path="/forum" element={<Forum />} />
       <Route path="/videos" element={<Video />} />
       <Route path="/vg" element={<VirtualGarden/>} />

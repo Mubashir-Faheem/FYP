@@ -13,87 +13,87 @@ const products =[
 {
 
     name:"Bell Pepper Plant",
-    image:'images/bellpepper.jpg',
+    image:'images/mint.jpg',
     description:"Beautiful Bell Pepper Plant",
     price:"Rs.550",
     countinstock:25,
     ratings:3.5,
     numreviews:15
+},{
+   
+    name:"Cauliflower Plant",
+    image:'images/mint.jpg',
+    description:"Beautiful Rose Plant",
+    price:"Rs.550",
+    countinstock:0,
+    ratings:4,
+    numreviews:15
 },
 {
-   
-        name:"Cauliflower Plant",
-        image:'images/cauliflower.jpg',
-        description:"Beautiful Rose Plant",
+    
+        name:"Coriander Plant",
+        image:'images/mint.jpg',
+        description:"Beautiful Coriander Plant",
         price:"Rs.550",
-        countinstock:0,
-        ratings:4,
+        countinstock:25,
+        ratings:3,
         numreviews:15
     },
     {
         
-            name:"Coriander Plant",
-            image:'images/coriander.jpg',
-            description:"Beautiful Coriander Plant",
+            name:"Green Chilli Plant",
+            image:'images/mint.jpg',
+            description:"Beautiful Green Chilli Plant",
             price:"Rs.550",
             countinstock:25,
-            ratings:3,
+            ratings:2,
             numreviews:15
         },
-        {
             
-                name:"Green Chilli Plant",
-                image:'images/greenchilli.jpg',
-                description:"Beautiful Green Chilli Plant",
+        {
+           
+                name:"Pee Plant",
+                image:'images/mint.jpg',
+                description:"Beautiful Pee Plant",
                 price:"Rs.550",
-                countinstock:25,
-                ratings:2,
+                countinstock:2,
+                ratings:5,
                 numreviews:15
             },
-                
             {
-               
-                    name:"Pee Plant",
-                    image:'images/pee.jpg',
-                    description:"Beautiful Pee Plant",
+                
+                    name:"Pomegranate Plant",
+                    image:'images/mint.jpg',
+                    description:"Beautiful Pomegranate Plant",
                     price:"Rs.550",
-                    countinstock:2,
-                    ratings:5,
+                    countinstock:25,
+                    ratings:1,
                     numreviews:15
                 },
                 {
-                    
-                        name:"Pomegranate Plant",
-                        image:'images/pomegranate.jpg',
-                        description:"Beautiful Pomegranate Plant",
+                   
+                        name:"Rose Plant",
+                        image:'images/mint.jpg',
+                        description:"Beautiful Rose Plant",
                         price:"Rs.550",
-                        countinstock:25,
-                        ratings:1,
-                        numreviews:15
+                        countinstock:0,
+                        ratings:0.5,
+                        numreviews:10
                     },
-                    {
+                   
                        
-                            name:"Rose Plant",
-                            image:'images/rose.jpg',
-                            description:"Beautiful Rose Plant",
-                            price:"Rs.550",
-                            countinstock:0,
-                            ratings:0.5,
-                            numreviews:10
-                        },
-                       
-                           
-                                {
-                                    
-                                        name:"Tomato Plant",
-                                        image:'images/tomato.jpg',
-                                        description:"Beautiful Tomato Plant",
-                                        price:"Rs.550",
-                                        countinstock:25,
-                                        ratings:4,
-                                        numreviews:15
-                                    },
-                                    
+                            {
+                                
+                                    name:"Tomato Plant",
+                                    image:'images/mint.jpg',
+                                    description:"Beautiful Tomato Plant",
+                                    price:"Rs.550",
+                                    countinstock:25,
+                                    ratings:4,
+                                    numreviews:15
+                                },
+                                
+
                                                                                                                                                             
                     
             
