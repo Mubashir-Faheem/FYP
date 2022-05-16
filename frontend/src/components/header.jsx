@@ -23,6 +23,10 @@ const header = () => {
        <Nav.Link >
         <i class="fas fa-user-plus"></i>&nbsp; SignUp</Nav.Link>
         </LinkContainer>
+       <LinkContainer to ="/cart">
+       <Nav.Link >
+        <i class="fas fa-user-plus"></i>&nbsp; Cart</Nav.Link>
+        </LinkContainer>
         
         
       </Nav>

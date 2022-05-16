@@ -4,7 +4,7 @@ import axios from 'axios'
 // import Product from "../products"
 // import Product from "../products"
 // import Product from "../../../backend/data/products"
-import {Row,Col,ListGroup,Button,Image, ListGroupItem} from 'react-bootstrap'
+import {Row,Col,ListGroup,Button,Image, ListGroupItem,Form} from 'react-bootstrap'
 import {useParams} from "react-router-dom"
 import Rating from '../components/Rating'
 import { Link } from 'react-router-dom'
@@ -14,7 +14,8 @@ import Loader from '../components/shared/loader'
 import Message from '../components/shared/message'
 
 
-    const ProductDetails = () => {
+    const ProductDetails = (history,match) => {
+        const {qty,setQty}=useState(0);
         let {id}=useParams();
         // const product=Product.find((p)=>p._id===id)
     const dispatch =useDispatch();
@@ -34,7 +35,11 @@ useEffect(()=>{
     // console.log(product)
     // console.log("hello world",match.params.id)
     dispatch(listProductDetails(id))
-},[dispatch]);
+},[dispatch,match]);
+const addToCartHandler = ()=>{
+    history.push(`./cart/${match.params.id}?qty=${qty}`)
+
+}
   
     return (
         <>
@@ -90,8 +95,29 @@ useEffect(()=>{
                     <Col>{product &&product.countinstock > 0? "In Stock": "Out of Stock" }</Col>
                 </Row>
                 </ListGroupItem>
+             {  product.countinstock > 0 &&(
+                 <ListGroupItem>
+                     <Row>
+                         <Col>Qty
+                         </Col>
+                         <Form.Control as ="select" value={qty} onChange={(e)=> setQty(e.target.value)}>
+                             {
+                                 [...Array(product.countinstock).keys()].map((x)=>(
+                                     <option key={x+1} value={x+1}>
+                                         {x+1}
+
+                                     </option>
+
+                                 ))
+                             }
+                         </Form.Control>
+
+                     </Row>
+                 </ListGroupItem>
+             )
+    }
                 <ListGroupItem>
-                    <Button id="btn" className="btn-block" type="button" to="/">Add to Cart </Button>
+                    <Button id="btn" className="btn-block" type="button" to="/cart">Add to Cart </Button>
                     
                   
                 </ListGroupItem>
