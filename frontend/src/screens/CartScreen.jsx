@@ -12,7 +12,7 @@ const CartScreen = (location) => {
     
 //   const productId=match.params.id
 //   const qty=location.search
-const qty = location.search ? Number(location.search.split("=")[1]) : 1;
+const qty = location.search ? Number(location.search.split("=")[1]) : 1; 
 const dispatch=useDispatch();
 // const [quan] = useSearchParams(`${qty}`)
   console.log(qty)
@@ -32,9 +32,9 @@ useEffect(()=>{
 }
 ,[dispatch,id,qty]
 )
-const cart=useSelector(state =>state.cart)
+const cart=useSelector(state =>state.name)
 // const{cartItems}=cart
-// console.log(cartItems)
+console.log("e",cart)
   
     return (
         <div>Hello</div>
