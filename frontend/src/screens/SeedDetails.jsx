@@ -4,7 +4,7 @@ import axios from 'axios'
 // import Product from "../products"
 // import Product from "../products"
 // import Product from "../../../backend/data/products"
-import {Row,Col,ListGroup,Button,Image, ListGroupItem} from 'react-bootstrap'
+import {Row,Col,ListGroup,Button,Image, ListGroupItem,Form} from 'react-bootstrap'
 import {useParams} from "react-router-dom"
 import Rating from '../components/Rating'
 import { Link } from 'react-router-dom'
@@ -13,10 +13,12 @@ import {listSeedDetails} from '../actions/seedActions'
 import Loader from '../components/shared/loader'
 import Message from '../components/shared/message'
 // import {useParams} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 
     const SeedDetails = () => {
         let {id}=useParams();
+        const [qty,setQty]=useState(1);
         // const product=Product.find((p)=>p._id===id)
     const dispatch =useDispatch();
     const seedDetails=useSelector(state =>state.seedDetails)
@@ -36,6 +38,20 @@ useEffect(()=>{
     // console.log("hello world",useParams.id)
     dispatch(listSeedDetails(id))
 },[dispatch]);
+
+let history=useNavigate()
+
+
+const addToCartHandler = ()=>{
+ 
+    
+     history(`./cart/${id}?qty=${qty}`)
+    //  history.push(`./cart/${match.params.id}?qty=${qty}`)
+
+
+console.log(id)
+}
+
   
     return (
         <>
@@ -91,8 +107,32 @@ useEffect(()=>{
                     <Col>{seed &&seed.countinstock > 0? "In Stock": "Out of Stock" }</Col>
                 </Row>
                 </ListGroupItem>
+                {/* {  seed.countinstock > 0 &&(
+                 <ListGroupItem>
+                     <Row>
+                         <Col>Qty
+                         </Col>
+                         <Form.Control as ="select" value={qty} onChange={(e)=> setQty(e.target.value)}>
+                             {
+                                 [...Array(seed.countinstock).keys()].map((x)=>(
+                                     <option key={x+1} value={x+1}>
+                                         {x+1}
+
+                                     </option>
+
+                                 ))
+                             }
+                         </Form.Control>
+                     </Row>
+                 </ListGroupItem>
+             )
+             
+    } */}
+
+
+
                 <ListGroupItem>
-                    <Button id="btn" className="btn-block" type="button" to="/">Add to Cart </Button>
+                    <Button id="btn" className="btn-block" type="button"  >Add to Cart </Button>
                     
                   
                 </ListGroupItem>

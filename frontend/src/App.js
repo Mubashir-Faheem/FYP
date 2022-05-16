@@ -30,7 +30,7 @@ import VirtualGarden from './screens/Vg';
 import SeedHome from './screens/SeedHome'
 import FertilizerHome from './screens/FertilizerHome';
 import FertilizerDetails from './screens/FertilizerDetails'
-import Cart from './screens/Cart'
+import CartScreen from './screens/CartScreen'
 
 // import Cart from './screens/Cart'
 // import StateProvider from './StateProvider'
@@ -63,7 +63,7 @@ function App() {
     {/* <SeedHome/> */}
     {/* <FertilizerHome/> */}
     {/* <FertilizerDetails/> */}
-    {/* <Cart/> */}
+    {/* <CartScreen/> */}
       <Routes >
       <Route path="/" element={<Main />} exact/>
 
@@ -86,7 +86,8 @@ function App() {
       <Route path="/signin" element={< Login />} />
       <Route path="signup" element={<Register/>} />
       <Route path="/Forget" element={<Forget />} />
-      <Route path="/Cart" element={<Cart />} />
+      <Route path="/cart/:id" element={<CartScreen />}/>
+      {/* <Route path="/cart" element={<CartScreen />} /> */}
 
       {/* <Route path="/signup" element={< Register />} /> */}
    

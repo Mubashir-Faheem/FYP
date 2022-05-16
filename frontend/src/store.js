@@ -7,18 +7,26 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import {productDetailsReducer, productListReducer} from './reducers/ProductReducer'
 import {seedListReducer,seedDetailsReducer} from './reducers/SeedReducer'
 import {fertilizerListReducer,fertilizerDetailsReducer} from './reducers/FertilizerReducer'
+import {CartReducer} from './reducers/CartReducer'
 
-
+const cartItemsFromStorage=localStorage.getItem("cartItems")? JSON.parse(localStorage.getItem("cartItems")):[]
+// const cartItemsFromStorage = localStorage.getItem("cartItems")
+//   ? JSON.parse(localStorage.getItem("cartItems"))
+//   : [];
 const reducer=combineReducers({
     productList:productListReducer,
     productDetails:productDetailsReducer,
     seedList:seedListReducer,
     seedDetails:seedDetailsReducer,
     fertilizerList:fertilizerListReducer,
-    fertilizerDetails:fertilizerDetailsReducer
+    fertilizerDetails:fertilizerDetailsReducer,
+    Cart:CartReducer
 
 });
-const initialState={};
+const initialState={
+    // cart:{cartItems :"GardenMart" }
+    cart:{cartItems:cartItemsFromStorage}
+};
 const middleware=[thunk];
  const store =createStore(
     reducer,

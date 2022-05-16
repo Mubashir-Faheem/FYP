@@ -12,10 +12,15 @@ import Card from "react-bootstrap/Card"
 import {listProductDetails} from '../actions/productActions'
 import Loader from '../components/shared/loader'
 import Message from '../components/shared/message'
+import {useNavigate} from 'react-router-dom'
+import { LinkContainer } from 'react-router-bootstrap'
+// import history from 'react-router-dom'
+// import  from 'react-router-dom'
 
 
-    const ProductDetails = (history,match) => {
-        const {qty,setQty}=useState(0);
+
+    const ProductDetails = () => {
+        const [qty,setQty]=useState(1);
         let {id}=useParams();
         // const product=Product.find((p)=>p._id===id)
     const dispatch =useDispatch();
@@ -35,12 +40,25 @@ useEffect(()=>{
     // console.log(product)
     // console.log("hello world",match.params.id)
     dispatch(listProductDetails(id))
-},[dispatch,match]);
-const addToCartHandler = ()=>{
-    history.push(`./cart/${match.params.id}?qty=${qty}`)
+},[dispatch]);
+let history=useNavigate()
 
+
+const addToCartHandler = ()=>{
+ 
+    
+     history(`/cart/${id}?qty=${qty}`)
+    //  history(`/CartScreen/cart/:id?/${id}?qty=${qty}`)
+
+
+console.log(id)
 }
-  
+// console.log("hello",addToCartHandler())
+
+// console.log("hello",addToCartHandler)
+// const addToCartHandler = () => {
+//         history.push(`/cart/${id}?qty=${qty}`);
+//       };
     return (
         <>
         
@@ -111,28 +129,20 @@ const addToCartHandler = ()=>{
                                  ))
                              }
                          </Form.Control>
-{/* 
-<Form.Control
-                  as="select"
-                  value={qty}
-                  onChange={(e) => setQty(e.target.value)}
-                >
-                  {[...Array(product.countInStock).keys()].map((x) => (
-                    <option key={x + 1} value={x + 1}>
-                      {x + 1}
-                    </option>
-                  ))}
-                </Form.Control> */}
-
                      </Row>
                  </ListGroupItem>
              )
+             
     }
+    {/* <LinkContainer to="/cart"> */}
                 <ListGroupItem>
-                    <Button id="btn" className="btn-block" type="button" to="/cart">Add to Cart </Button>
+                    <Button id="btn" className="btn-block" type="button" to="/CartScreen" onClick={addToCartHandler} >Add to Cart </Button>
                     
                   
                 </ListGroupItem>
+                {/* </LinkContainer> */}
+                
+                
                 
         </Col>
     
@@ -182,9 +192,9 @@ export default ProductDetails
 //   }, [dispatch,match]);
 
 
-// //   const addToCartHandler = () => {
-// //     history.push(`/cart/${match.params.id}?qty=${qty}`);
-// //   };
+//   const addToCartHandler = () => {
+//     history.push(`/cart/${match.params.id}?qty=${qty}`);
+//   };
 //   return (
 //     <>
 //       <Link to="/" className="btn btn-light">

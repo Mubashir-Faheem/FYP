@@ -4,7 +4,7 @@ import axios from 'axios'
 // import Product from "../products"
 // import Product from "../products"
 // import Product from "../../../backend/data/products"
-import {Row,Col,ListGroup,Button,Image, ListGroupItem} from 'react-bootstrap'
+import {Row,Col,ListGroup,Button,Image, ListGroupItem,Form} from 'react-bootstrap'
 import {useParams} from "react-router-dom"
 import Rating from '../components/Rating'
 import { Link } from 'react-router-dom'
@@ -13,9 +13,12 @@ import {listFertilizerDetails} from '../actions/fertilizerAction'
 import Loader from '../components/shared/loader'
 import Message from '../components/shared/message'
 // import {useParams} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
+
 
 
     const FertilizerDetails = () => {
+        const [qty,setQty]=useState(1);
         let {id}=useParams();
         // const product=Product.find((p)=>p._id===id)
     const dispatch =useDispatch();
@@ -36,6 +39,19 @@ useEffect(()=>{
     // console.log("hello world",useParams.id)
     dispatch(listFertilizerDetails(id))
 },[dispatch]);
+
+let history=useNavigate()
+
+
+const addToCartHandler = ()=>{
+ 
+    
+     history(`./cart/${id}?qty=${qty}`)
+    //  history.push(`./cart/${match.params.id}?qty=${qty}`)
+
+
+console.log(id)
+}
   
     return (
         <>
@@ -91,6 +107,7 @@ useEffect(()=>{
                     <Col>{fertilizer &&fertilizer.countinstock > 0? "In Stock": "Out of Stock" }</Col>
                 </Row>
                 </ListGroupItem>
+               
                 <ListGroupItem>
                     <Button id="btn" className="btn-block" type="button" to="/">Add to Cart </Button>
                     
