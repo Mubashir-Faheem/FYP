@@ -19,7 +19,7 @@ import { LinkContainer } from 'react-router-bootstrap'
 
 
 
-    const ProductDetails = () => {
+const ProductDetails = () => {
         const [qty,setQty]=useState(1);
         let {id}=useParams();
         // const product=Product.find((p)=>p._id===id)
@@ -49,9 +49,6 @@ const addToCartHandler = ()=>{
     
      history(`/cart/${id}?qty=${qty}`)
     //  history(`/CartScreen/cart/:id?/${id}?qty=${qty}`)
-
-
-console.log(id)
 }
 // console.log("hello",addToCartHandler())
 
@@ -113,6 +110,7 @@ console.log(id)
                     <Col>{product &&product.countinstock > 0? "In Stock": "Out of Stock" }</Col>
                 </Row>
                 </ListGroupItem>
+                
              {  product.countinstock > 0 &&(
                  <ListGroupItem>
                      <Row>

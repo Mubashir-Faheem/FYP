@@ -2,7 +2,7 @@ const products =[
     {
     
     name:"Minttttss Plant",
-    image:'images/mint.jpg',
+    image:'images/Cabbage.jpg',
     description:"Beautiful Mint Plant",
     price:"Rs.950",
     countinstock:25,
@@ -13,7 +13,7 @@ const products =[
 {
 
     name:"Bell Pepper Plant",
-    image:'images/mint.jpg',
+    image:'images/Cabbage.jpg',
     description:"Beautiful Bell Pepper Plant",
     price:"Rs.550",
     countinstock:25,
@@ -22,7 +22,7 @@ const products =[
 },{
    
     name:"Cauliflower Plant",
-    image:'images/mint.jpg',
+    image:'images/Cabbage.jpg',
     description:"Beautiful Rose Plant",
     price:"Rs.550",
     countinstock:0,
@@ -32,7 +32,7 @@ const products =[
 {
     
         name:"Coriander Plant",
-        image:'images/mint.jpg',
+        image:'images/Cabbage.jpg',
         description:"Beautiful Coriander Plant",
         price:"Rs.550",
         countinstock:25,
@@ -42,7 +42,7 @@ const products =[
     {
         
             name:"Green Chilli Plant",
-            image:'images/mint.jpg',
+            image:'images/Cabbage.jpg',
             description:"Beautiful Green Chilli Plant",
             price:"Rs.550",
             countinstock:25,
@@ -53,7 +53,7 @@ const products =[
         {
            
                 name:"Pee Plant",
-                image:'images/mint.jpg',
+                image:'images/Cabbage.jpg',
                 description:"Beautiful Pee Plant",
                 price:"Rs.550",
                 countinstock:2,
@@ -63,7 +63,7 @@ const products =[
             {
                 
                     name:"Pomegranate Plant",
-                    image:'images/mint.jpg',
+                    image:'images/Cabbage.jpg',
                     description:"Beautiful Pomegranate Plant",
                     price:"Rs.550",
                     countinstock:25,
@@ -73,7 +73,7 @@ const products =[
                 {
                    
                         name:"Rose Plant",
-                        image:'images/mint.jpg',
+                        image:'images/Cabbage.jpg',
                         description:"Beautiful Rose Plant",
                         price:"Rs.550",
                         countinstock:0,
@@ -85,7 +85,7 @@ const products =[
                             {
                                 
                                     name:"Tomato Plant",
-                                    image:'images/mint.jpg',
+                                    image:'images/Cabbage.jpg',
                                     description:"Beautiful Tomato Plant",
                                     price:"Rs.550",
                                     countinstock:25,

@@ -9,10 +9,12 @@ import {seedListReducer,seedDetailsReducer} from './reducers/SeedReducer'
 import {fertilizerListReducer,fertilizerDetailsReducer} from './reducers/FertilizerReducer'
 import {CartReducer} from './reducers/CartReducer'
 
-const cartItemsFromStorage=localStorage.getItem("cartItems")? JSON.parse(localStorage.getItem("cartItems")):[]
-// const cartItemsFromStorage = localStorage.getItem("cartItems")
-//   ? JSON.parse(localStorage.getItem("cartItems"))
-//   : [];
+
+
+const cartItemsFromStorage = localStorage.getItem("cartItems")
+  ? JSON.parse(localStorage.getItem("cartItems"))
+  : [];
+
 const reducer=combineReducers({
     productList:productListReducer,
     productDetails:productDetailsReducer,
@@ -20,11 +22,11 @@ const reducer=combineReducers({
     seedDetails:seedDetailsReducer,
     fertilizerList:fertilizerListReducer,
     fertilizerDetails:fertilizerDetailsReducer,
-    Cart:CartReducer
+    cart:CartReducer
 
 });
 const initialState={
-    // cart:{cartItems :"GardenMart" }
+    // cart:{cartItems :'GardenMart'}
     cart:{cartItems:cartItemsFromStorage}
 };
 const middleware=[thunk];
