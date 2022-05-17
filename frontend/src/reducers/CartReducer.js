@@ -19,7 +19,9 @@ export const CartReducer = (state = { cartItems: [] }, action) => {
           return {
             ...state,
             cartItems: [...state.cartItems, item],
+          
           };
+          // console.log(cartItems)
         }
       case CART_REMOVE_ITEM:
         return {
