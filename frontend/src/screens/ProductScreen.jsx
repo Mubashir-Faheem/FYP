@@ -44,7 +44,7 @@ const ProductScreen = ({product}) => {
       
     </Card.Text>
     <Card.Text as="div">
-      <div className="my-3">
+      <div className="my-3">Rs.
           {product &&product.price} 
 
       </div>

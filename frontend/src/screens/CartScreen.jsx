@@ -260,7 +260,7 @@ const CartScreen=()=>{
                     
                 </ListGroupItem>
                 <ListGroupItem>
-                    Price: {product &&product.price}
+                    Price:Rs. {product &&product.price}
                     </ListGroupItem>
                     <ListGroupItem>
                         {product &&product.description}

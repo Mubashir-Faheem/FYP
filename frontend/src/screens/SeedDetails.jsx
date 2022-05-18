@@ -90,7 +90,7 @@ console.log(id)
                     
                 </ListGroupItem>
                 <ListGroupItem>
-                    Price: {seed &&seed.price}
+                    Price:Rs. {seed &&seed.price}
                     </ListGroupItem>
                     <ListGroupItem>
                         {seed &&seed.description}

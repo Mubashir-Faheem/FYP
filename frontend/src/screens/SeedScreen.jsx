@@ -44,7 +44,7 @@ const SeedScreen = ({seed}) => {
       
     </Card.Text>
     <Card.Text as="div">
-      <div className="my-3">
+      <div className="my-3">Rs.
           {seed && seed.price} 
 
       </div>

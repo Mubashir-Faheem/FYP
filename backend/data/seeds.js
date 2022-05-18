@@ -3,7 +3,7 @@ const seeds=[
     name:"Bitter Gourd ",
     image:'images/mint.jpg',
     description:"Excellent product for control of mosquito",
-    price:"Rs.950",
+    price:550,
     countinstock:25,
     ratings:5,
     numreviews:25
@@ -13,7 +13,7 @@ const seeds=[
     name:"Bitter Gourd Long ",
     image:'images/mint.jpg',
     description:"Excellent product for control of mosquito",
-    price:"Rs.950",
+    price:550,
     countinstock:25,
     ratings:5,
     numreviews:25
@@ -23,7 +23,7 @@ const seeds=[
     name:"Long Melon",
     image:'images/mint.jpg',
     description:"Excellent product for control of mosquito",
-    price:"Rs.950",
+    price:550,
     countinstock:25,
     ratings:5,
     numreviews:25
@@ -33,7 +33,7 @@ const seeds=[
     name:"Melon",
     image:'images/mint.jpg',
     description:"Excellent product for control of mosquito",
-    price:"Rs.950",
+    price:550,
     countinstock:25,
     ratings:5,
     numreviews:25
@@ -43,7 +43,7 @@ const seeds=[
     name:"Okra",
     image:'images/mint.jpg',
     description:"Excellent product for control of mosquito",
-    price:"Rs.950",
+    price:550,
     countinstock:25,
     ratings:5,
     numreviews:25
@@ -53,7 +53,7 @@ const seeds=[
     name:"Pumpkin",
     image:'images/mint.jpg',
     description:"Excellent product for control of mosquito",
-    price:"Rs.950",
+    price:550,
     countinstock:25,
     ratings:5,
     numreviews:25
@@ -63,7 +63,7 @@ const seeds=[
     name:"Snap Melon",
     image:'images/mint.jpg',
     description:"Excellent product for control of mosquito",
-    price:"Rs.950",
+    price:550,
     countinstock:25,
     ratings:5,
     numreviews:25
@@ -73,7 +73,7 @@ const seeds=[
     name:"Pics/Songe Gourd",
     image:'images/mint.jpg',
     description:"Excellent product for control of mosquito",
-    price:"Rs.950",
+    price:550,
     countinstock:25,
     ratings:5,
     numreviews:25
