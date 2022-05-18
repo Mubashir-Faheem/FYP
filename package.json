@@ -19,6 +19,7 @@
     "react": "^18.1.0",
     "react-bootstrap": "^2.0.3",
     "react-dom": "^18.1.0",
+    "react-icons": "^4.3.1",
     "react-player": "^2.10.1",
     "react-redux": "^8.0.1",
     "react-router-dom": "^6.0.2",
@@ -30,7 +31,7 @@
   "version": "1.0.0",
   "description": "mern app",
   "main": "server.js",
-  "proxy": "https://0.0.0.0:8080",
+  "proxy": "http://0.0.0.0:8080",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon backend/server  --ignore client",

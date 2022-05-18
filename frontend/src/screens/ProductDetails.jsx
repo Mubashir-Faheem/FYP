@@ -22,6 +22,8 @@ import { LinkContainer } from 'react-router-bootstrap'
 const ProductDetails = () => {
         const [qty,setQty]=useState(1);
         let {id}=useParams();
+        // let{price}=useParams();
+       
         // const product=Product.find((p)=>p._id===id)
     const dispatch =useDispatch();
     const productDetails=useSelector(state =>state.productDetails)
@@ -30,7 +32,7 @@ const ProductDetails = () => {
 useEffect(()=>{
 
     // let {id}=useParams();
-    console.log("he",id)
+    console.log("id",id)
     // const fetchProduct=async ({})=>{
     //     // const{data}=await axios.get(`/products:id/${match.id}`);
     //     const{data}=await axios.get(`/products/${id}`)

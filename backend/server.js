@@ -34,6 +34,7 @@ app.use("/api",fertilizerRoutes)
 app.use("/api",seedRoutes)
 app.use(errorHandler);
 app.use(express.static('public'))
+app.use(express.static('backend'))
 app.get("/",(req,res)=>{
     res.send("<h1>Node app</h1>");
 
