@@ -188,19 +188,19 @@ import {
   
 } from 'react-bootstrap';
 import {FaBeer}  from 'react-icons/fa';
-import {addToCart} from '../actions/cartAction'
+import {addToCart,removeFromCart} from '../actions/cartAction'
 import {useDispatch,useSelector} from 'react-redux'
 import Rating from '../components/Rating'
 
 // var { width } = Dimensions.get("window")
 // import Icon from '';
 // import Seprator from './components/Separator';
-import {useParams,useSearchParams,params,Link} from 'react-router-dom'
+import {useParams,useSearchParams,params,Link,useNavigate} from 'react-router-dom'
 
 
 const CartScreen=()=>{
   
-  
+  let history=useNavigate()
     let{id}=useParams() 
     console.log("id",id)
     // let [searchParams]=useSearchParams()
@@ -220,13 +220,24 @@ const CartScreen=()=>{
 
    const removeFromCartHandler=({id})=>{
       console.log("remove")
+      dispatch(removeFromCart(id))
+
+    }
+
+    const refreshpage=()=>{
+      window.location.reload(false);
+    }
+    const checkout=()=>{
+      history('/login?redirect=shipping')
 
     }
 
 
   // const plant = route.params;
-  // const totalprice= parseInt(plant.price)+100
+  const productprice= parseInt(qty*product.price)
+  const totalprice=parseInt(productprice)+200
   // console.log(price)
+
     return (
       // <h1>hello</h1>
       <>
@@ -236,8 +247,8 @@ const CartScreen=()=>{
                 <Link to="/homescreen " className="btn btn-dark">
                     <i class="fas fa-arrow-left"></i> &nbsp; Go Back
             </Link>
-        
-                 <Col md={6}>
+
+                 <Col md={4}>
                                 
                 <Card className="my-3 p-3 rounded">
 
@@ -245,7 +256,9 @@ const CartScreen=()=>{
             <Card.Img variant="top" src={`../${product && product.image}` }  />
             </Card> 
         </Col>
+        </div>
         <Row>
+
         <Col md={3}>
         <Card className="my-3 p-3 rounded">
             <ListGroup variant="flush">
@@ -268,10 +281,11 @@ const CartScreen=()=>{
                     <ListGroupItem>
                         {/* Qty:{qty} */}
                     </ListGroupItem>
-                    {/* <button 
-                    type="button" variant="light" onclick={()=>removeFromCartHandler({id})}>
-                      <i className="fa fa-trash" aria-hidden="true"></i>
-                       </button> */}
+                    <button 
+                    type="button" variant="light" onClick={()=>removeFromCartHandler({id} ,refreshpage())}>
+                      <i className="fa fa-trash text-danger" aria-hidden="true"></i>
+                      
+                       </button>
 
                        {  product.countinstock > 0 &&(
                  <ListGroupItem>
@@ -295,6 +309,7 @@ const CartScreen=()=>{
                          </Form.Control>
                      </Row>
                  </ListGroupItem>
+                 
              )
              
     }
@@ -305,20 +320,35 @@ const CartScreen=()=>{
                 </ListGroup>
                 </Card>
                 </Col>
-                <Col md={4} >
-                  <Card>
-                    <ListGroup variant="flush">
+                <Col md={4}  >
+                  <Card >
+                    <ListGroup variant="flush" >
                       <ListGroupItem>
                         <h2>Subtotal Products 
                            {/* ({cartItems.reduce((acc,item)=>acc+{qty})}) */}
                             </h2>
+                            {/* Rs{cartItems.reduce((acc,product)=>acc+product.qty *product.price)} */}
+                            
                       </ListGroupItem>
+                      <ListGroupItem>
+                     <h4 > Product Price=Rs.</h4> {productprice}
+                        <h4>    Shipping Amount=Rs.</h4> 200
+                          <h2 style={{color:"red"}}>  Total Price=Rs.</h2> {totalprice}
+                            </ListGroupItem>
+                            <button
+                 type="button"
+                 className="btn-block"
+                 disabled={product.length === 0}
+                 onClick={checkout}
+               >
+                 Proceed to checkOut
+               </button>
                     </ListGroup>
                   </Card>
 
                 </Col>
                 </Row>
-                </div>
+                {/* </div> */}
                 </Row>
                 
                 

@@ -1,24 +1,14 @@
 const express=require ('express')
-const Seed=require('../models/SeedModel')
-const asyncHandler=require('express-async-handler');
+const {getSeeds,getSeed} =require('../controllers/seedsController')
 
 
 const seedrouter=express.Router();
 
 //Routing for all seeds
-seedrouter.get("/seeds",asyncHandler(async(req,res)=>{
-    const seeds=await Seed.find({})
-    res.json(seeds);
-})
-);
+seedrouter.route("/seeds").get(getSeeds)
+
 
 //Routing for single seed
-seedrouter.get("/seeds/:id",asyncHandler(async(req,res)=>{
-    const seed=await Seed.findById(req.params.id)
-    if(seed){
-        res.json(seed)
-    }else{
-        res.status(4040).json({message:"Seed not found"})
-    }
-}));
+seedrouter.route("/seeds/:id").get(getSeed);
+
 module.exports=seedrouter

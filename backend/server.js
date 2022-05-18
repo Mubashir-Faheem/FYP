@@ -8,7 +8,7 @@ const {errorHandler}=require("./middlewares/errorMiddleware")
 const productRoutes=require('./routes/productsRoute')
 const fertilizerRoutes=require('./routes/fertilizersRoute')
 const seedRoutes=require('./routes/seedsRoute')
-
+const usersRoutes=require('./routes/UsersRoute')
 
 const dotenv=require("dotenv");
 require('dotenv').config()
@@ -21,6 +21,7 @@ connectDb(); //connecting to mongodb
 // var param=express.useParam();
 // const { uuid } = require('uuidv4');
 const app= express();
+app.use(express.json()); //middleware
 app.use(cors());
 
 //dotenv config
@@ -32,6 +33,7 @@ res.send("<h1>Welcome to node server</h1>");
 app.use("/api",productRoutes);
 app.use("/api",fertilizerRoutes)
 app.use("/api",seedRoutes)
+app.use("/api/users",usersRoutes)
 app.use(errorHandler);
 app.use(express.static('public'))
 app.use(express.static('backend'))

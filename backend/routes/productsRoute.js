@@ -1,6 +1,5 @@
 const express=require('express');
-const Product=require('../models/ProductModel')
-const asyncHandler=require('express-async-handler')
+const {getProducts,getProduct} =require( '../controllers/productsController')
 
 const productrouter=express.Router();
 
@@ -10,12 +9,8 @@ const productrouter=express.Router();
 //     res.json(products);
 // })
 // );
-productrouter.get("/products",asyncHandler(async(req,res)=>{
-    const products=await Product.find({});
-    // throw new Error("Some error")
-    res.json(products);
-})
-);
+productrouter.route("/products").get(getProducts)
+
 
 // router.get("/products/:id",(req,res)=>{
 // //      let {id}=useParam();
@@ -27,13 +22,6 @@ productrouter.get("/products",asyncHandler(async(req,res)=>{
 // });
 
 //routing for single product
-productrouter.get("/products/:id",asyncHandler(async(req,res)=>{
-    const product=await Product.findById(req.params.id);
-    if(product){
-        res.json(product);
-    }
-    else{
-        res.status(404).json({message:"Product not found"});
-    }
-})); 
+productrouter.route("/products/:id").get(getProduct); 
+
 module.exports=productrouter;
