@@ -5,14 +5,14 @@ import Container from "react-bootstrap/Container"
 // import React, { Component }  from 'react';
 import React from 'react'
 import Footer from "./components/footer"
-import Header from "./components/header"
+import Header from "./components/Header"
 import Homescreen from "./screens/homescreen"
 // import {ProductShow} from "./screens/ProductScreen"
 import {BrowserRouter as Router, Route,Routes} from "react-router-dom"
 // import ProductScreen from "./screens/ProductScreen"
 import ProductDetails from "./screens/ProductDetails"
-import Login from "./screens/Login/Login"
-import Register from './screens/Register'
+import LoginScreen from './screens/LoginScreen';
+import RegisterScreen from './screens/RegisterScreen';
 import Forget from './screens/Forget';
 import Main from './screens/Main'
 import SeedDetails from './screens/SeedDetails';
@@ -31,6 +31,8 @@ import SeedHome from './screens/SeedHome'
 import FertilizerHome from './screens/FertilizerHome';
 import FertilizerDetails from './screens/FertilizerDetails'
 import CartScreen from './screens/CartScreen'
+import ShippingScreen from './screens/ShippingScreen';
+
 
 // import Cart from './screens/Cart'
 // import StateProvider from './StateProvider'
@@ -50,11 +52,11 @@ function App() {
   return (
 
     <Router>
-    <Header />
+    <Header/>
     <main className="my-3"><Container>
       {/* <h1>E-Commerce App</h1> */}
       {/* <Homescreen /> */}
-     {/* <Login /> */}
+     {/* <LoginScreen /> */}
      {/* <Register /> */}
      {/* {<Main/>} */}
     {/* <SeedScreen/> */}
@@ -83,10 +85,12 @@ function App() {
       <Route path="/forum" element={<Forum />} />
       <Route path="/videos" element={<Video />} />
       <Route path="/vg" element={<VirtualGarden/>} />
-      <Route path="/signin" element={< Login />} />
-      <Route path="signup" element={<Register/>} />
+      <Route path="/login" element={<LoginScreen/>} />
+      <Route path="/signup" element={<RegisterScreen/>} />
       <Route path="/Forget" element={<Forget />} />
       <Route path="/cart/:id" element={<CartScreen />}/>
+      <Route path="/shipping" component={ShippingScreen} />
+      
       {/* <Route path="/cart" element={<CartScreen />} /> */}
 
       {/* <Route path="/signup" element={< Register />} /> */}

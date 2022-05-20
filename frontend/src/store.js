@@ -7,13 +7,27 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import {productDetailsReducer, productListReducer} from './reducers/ProductReducer'
 import {seedListReducer,seedDetailsReducer} from './reducers/SeedReducer'
 import {fertilizerListReducer,fertilizerDetailsReducer} from './reducers/FertilizerReducer'
-import {CartReducer} from './reducers/CartReducer'
-
+import {cartReducer} from './reducers/CartReducer'
+import {
+    orderCreateReducer,
+    orderDetailsReducer,
+    orderPayReducer,
+    orderListMyReducer,
+  } from "./reducers/OrderReducer"
+  import {userLoginReducer,userRegisterReducer,userDetailsReducer,userListReducer,userUpdateProfileReducer,userDeleteReducer} from './reducers/UserReducers'
 
 
 const cartItemsFromStorage = localStorage.getItem("cartItems")
   ? JSON.parse(localStorage.getItem("cartItems"))
   : [];
+
+const shippingAddressFromStorage = localStorage.getItem("shippingAddress")
+? JSON.parse(localStorage.getItem("shippingAddress"))
+: {};
+
+const userInfoFromStorage = localStorage.getItem("userInfo")
+? JSON.parse(localStorage.getItem("userInfo"))
+: null;
 
 const reducer=combineReducers({
     productList:productListReducer,
@@ -22,13 +36,24 @@ const reducer=combineReducers({
     seedDetails:seedDetailsReducer,
     fertilizerList:fertilizerListReducer,
     fertilizerDetails:fertilizerDetailsReducer,
-    cart:CartReducer
+    cart:cartReducer,
+    userLogin: userLoginReducer,
+  userRegister: userRegisterReducer,
+  userDetails: userDetailsReducer,
+  userUpdateProfile: userUpdateProfileReducer,
+    orderCreate: orderCreateReducer,
+  orderDetails: orderDetailsReducer,
+  orderPay: orderPayReducer,
+  orderListMy: orderListMyReducer,
 
 });
 const initialState={
     // cart:{cartItems :'GardenMart'}
-    cart:{cartItems:cartItemsFromStorage}
-};
+    cart:{cartItems:cartItemsFromStorage,
+    shippingAddress: shippingAddressFromStorage,
+},
+userLogin: { userInfo: userInfoFromStorage },}
+
 const middleware=[thunk];
  const store =createStore(
     reducer,
