@@ -62,7 +62,7 @@ function App() {
       {/* <h1>E-Commerce App</h1> */}
       {/* <Homescreen /> */}
      {/* <LoginScreen /> */}
-     {/* <Register /> */}
+     {/* <RegisterScreen /> */}
      {/* {<Main/>} */}
     {/* <SeedScreen/> */}
     {/* <Blog/> */}

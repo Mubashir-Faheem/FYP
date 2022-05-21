@@ -63,7 +63,8 @@ const history=useNavigate()
         <Row>
           <Col>
             New Customer ?
-            <Link to={redirect ? `register?redirect=${redirect}` : "/register"}>
+            {/* <Link to={redirect ? `signup?redirect=${redirect}` : "/signup"}> */}
+            <Link to={ "/signup"}>
               Register
             </Link>
           </Col>

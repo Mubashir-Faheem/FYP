@@ -89,7 +89,8 @@ const history=useNavigate()
         <Row>
           <Col>
             Have an account !
-            <Link to={redirect ? `login?redirect=${redirect}` : "/login"}>
+            {/* <Link to={redirect ? `login?redirect=${redirect}` : "/login"}> */}
+            <Link to={ "/login"}>
               Login
             </Link>
           </Col>
