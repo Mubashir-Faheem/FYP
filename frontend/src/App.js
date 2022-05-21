@@ -31,7 +31,12 @@ import SeedHome from './screens/SeedHome'
 import FertilizerHome from './screens/FertilizerHome';
 import FertilizerDetails from './screens/FertilizerDetails'
 import CartScreen from './screens/CartScreen'
-import ShippingScreen from './screens/ShippingScreen';
+import ProfileScreen from './screens/ProfileScreen'
+import ShippingScreen from './screens/ShippingScreen'
+import PaymentScreen from './screens/PaymentScreen'
+import PlaceOrderScreen from './screens/PlaceOrderScreen';
+import OrderScreen from './screens/OrderScreen'
+
 
 
 // import Cart from './screens/Cart'
@@ -66,6 +71,11 @@ function App() {
     {/* <FertilizerHome/> */}
     {/* <FertilizerDetails/> */}
     {/* <CartScreen/> */}
+    {/* <ShippingScreen/> */}
+    {/* <PlaceOrderScreen/> */}
+    {/* <OrderScreen/> */}
+
+
       <Routes >
       <Route path="/" element={<Main />} exact/>
 
@@ -86,10 +96,17 @@ function App() {
       <Route path="/videos" element={<Video />} />
       <Route path="/vg" element={<VirtualGarden/>} />
       <Route path="/login" element={<LoginScreen/>} />
+      <Route path="/shipping" element={<ShippingScreen/>} />
+      <Route path="/profile" element={<ProfileScreen/>} />
       <Route path="/signup" element={<RegisterScreen/>} />
       <Route path="/Forget" element={<Forget />} />
       <Route path="/cart/:id" element={<CartScreen />}/>
-      <Route path="/shipping" component={ShippingScreen} />
+      <Route path="/shipping" element={<ShippingScreen />}/>
+      <Route path="/payment" element={<PaymentScreen />}/>
+      <Route path="/placeorder" element={<PlaceOrderScreen />}/>
+      <Route path="/order/:id" element={<OrderScreen/>} />
+
+      
       
       {/* <Route path="/cart" element={<CartScreen />} /> */}
 

@@ -5,7 +5,7 @@ const orderSchema=mongoose.Schema({
 
     User:{
         type:mongoose.Schema.Types.ObjectId,
-        required:true,
+        // required:true,
         ref:'User'
 
     },
@@ -30,7 +30,7 @@ const orderSchema=mongoose.Schema({
         },
         Product:{
             type:mongoose.Schema.Types.ObjectId,
-            required:true,
+            // required:true,
             ref:'Product'
         }
     }],
@@ -44,7 +44,7 @@ const orderSchema=mongoose.Schema({
             type:String,
             required:true
         },
-        postalCode:{
+        postalcode:{
             type:Number,
             required:true
         },
@@ -55,7 +55,7 @@ const orderSchema=mongoose.Schema({
     },
     payment:{
         type:String,
-        required:true
+        // required:true
     },
     paymentResult:{
         id:{type:String},
