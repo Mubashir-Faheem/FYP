@@ -38,6 +38,10 @@ const rentingSchema=mongoose.Schema({
         type:Number,
         required:true
     },
+    min:{
+        type:Number,
+        required:true
+    },
     product:{
         type:String,
         required:true

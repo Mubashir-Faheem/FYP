@@ -10,6 +10,7 @@ const fertilizerRoutes=require('./routes/fertilizersRoute')
 const seedRoutes=require('./routes/seedsRoute')
 const usersRoutes=require('./routes/UsersRoute')
 const orderRoutes=require('./routes/orderRoute')
+const rentingRoutes=require('./routes/rentingRoute')
 
 const dotenv=require("dotenv");
 require('dotenv').config()
@@ -36,6 +37,7 @@ app.use("/api",fertilizerRoutes)
 app.use("/api",seedRoutes)
 app.use("/api/users",usersRoutes)
 app.use("/api/orders",orderRoutes)
+app.use("/api",rentingRoutes)
 app.use(errorHandler);
 app.use(express.static('public'))
 app.use(express.static('backend'))
