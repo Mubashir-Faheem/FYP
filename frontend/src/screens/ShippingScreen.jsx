@@ -34,7 +34,7 @@ let history=useNavigate();
           <Form.Group controlId="address">
             <Form.Label >Address</Form.Label>
             <Form.Control
-              type="text"
+              type="Text"
               placeholder="Enter Address"
               value={address}
               onChange={(e) => setAddress(e.target.value)}
@@ -44,7 +44,7 @@ let history=useNavigate();
           <Form.Group controlId="city">
             <Form.Label>City</Form.Label>
             <Form.Control
-              type="text"
+              type="Text"
               placeholder="Enter City"
               value={city}
               onChange={(e) => setCity(e.target.value)}
@@ -54,7 +54,7 @@ let history=useNavigate();
           <Form.Group controlId="postalcode">
             <Form.Label>PostalCode</Form.Label>
             <Form.Control
-              type="text"
+              type="Number"
               placeholder="Enter postalcode"
               value={postalcode}
               onChange={(e) => setPostalcode(e.target.value)}
@@ -64,7 +64,7 @@ let history=useNavigate();
           <Form.Group controlId="country">
             <Form.Label>Country</Form.Label>
             <Form.Control
-              type="text"
+              type="Text"
               placeholder="Enter Country"
               value={country}
               onChange={(e) => setCountry(e.target.value)}
