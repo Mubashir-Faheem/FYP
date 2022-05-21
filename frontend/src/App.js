@@ -25,7 +25,7 @@ import SinglePost from './screens/Blog/SinglePost';
 import Fertilizerscreen from './screens/FertilizerScreen';
 import Forum from './screens/Forum';
 import Video from './screens/Videos';
-import VirtualGarden from './screens/Vg';
+import VirtualGarden from './screens/Virtual Garden/Virtual Garden'
 // import SeedScreen from './screens/SeedScreen';
 import SeedHome from './screens/SeedHome'
 import FertilizerHome from './screens/FertilizerHome';

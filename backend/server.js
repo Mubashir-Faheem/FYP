@@ -29,7 +29,7 @@ app.use(cors());
 //dotenv config
 // dotenv.config();
 app.get("/",(req,res)=>{
-res.send("<h1>Welcome to node server</h1>");
+res.send("<h1>Welcome to node serverss</h1>");
 });
 
 app.use("/api",productRoutes);
