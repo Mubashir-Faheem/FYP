@@ -38,7 +38,7 @@ const history=useNavigate()
   };
 
   const checkout = () => {
-    history("/login?redirect=shipping");
+    history("/login?redirect=/shipping");
   };
   return (
     <>
@@ -114,7 +114,7 @@ const history=useNavigate()
                 disabled={cartItems.length === 0}
                 onClick={checkout}
               >
-                Proceed to checkOut
+                Proceed to checkout
               </Button>
             </ListGroup>
           </Card>
