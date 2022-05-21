@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container"
 // import React, { Component }  from 'react';
 import React from 'react'
 import Footer from "./components/footer"
-import Header from "./components/Header"
+import Header from "./components/header"
 import Homescreen from "./screens/homescreen"
 // import {ProductShow} from "./screens/ProductScreen"
 import {BrowserRouter as Router, Route,Routes} from "react-router-dom"
