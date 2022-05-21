@@ -1,4 +1,4 @@
-const Product=require('../models/ProductModel')
+const Renting=require('../models/RentingModel')
 const asyncHandler=require('express-async-handler')
 
 const getProducts=asyncHandler(async(req,res)=>{
