@@ -2,11 +2,14 @@
 const Renting=require('../models/RentingModel')
 const asyncHandler=require('express-async-handler')
 
-const getServices=asyncHandler(async(req,res)=>{
+const getRenting=asyncHandler(async(req,res)=>{
     const services=await Renting.find({});
     // throw new Error("Some error")
     res.json(services);
 })
+
+
+
 
 // const getProduct=asyncHandler(async(req,res)=>{
 //     const product=await Product.findById(req.params.id);
@@ -17,5 +20,5 @@ const getServices=asyncHandler(async(req,res)=>{
 //         res.status(404).json({message:"Product not found"});
 //     }
 // })
-module.exports={getServices}
+module.exports={getRenting}
 

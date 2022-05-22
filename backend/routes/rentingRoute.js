@@ -1,5 +1,5 @@
 const express=require('express');
-const {getServices} =require( '../controllers/rentingController')
+const {getRenting} =require( '../controllers/rentingController')
 const Renting=require('../models/RentingModel')
 const router=express.Router();
 
@@ -9,7 +9,7 @@ const router=express.Router();
 //     res.json(services);
 // })
 // );
-router.route("/services").get(getServices)
+router.route("/services").get(getRenting)
 
 
 // router.get("/products/:id",(req,res)=>{

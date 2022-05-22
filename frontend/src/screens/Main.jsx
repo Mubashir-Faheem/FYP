@@ -81,7 +81,7 @@ const Main = () => {
  
 </LinkContainer>
 
-<LinkContainer to="/Rent" style={{display: 'right',justifyContent:'right', alignItems:'right ' ,marginLeft:'10%'}}> 
+<LinkContainer to="/renting" style={{display: 'right',justifyContent:'right', alignItems:'right ' ,marginLeft:'10%'}}> 
 
 <div className="btn btn-dark"  >    <i class=""></i> &nbsp; Renting</div>
 
