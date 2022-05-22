@@ -33,7 +33,7 @@ app.get("/",(req,res)=>{
 res.send("<h1>Welcome to node serverss</h1>");
 });
 
-app.use("/api",productRoutes);
+app.use("/api/products",productRoutes);
 app.use("/api",fertilizerRoutes)
 app.use("/api",seedRoutes)
 app.use("/api/users",usersRoutes)

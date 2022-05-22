@@ -4,7 +4,7 @@ import {createStore} from 'redux'
 import {combineReducers,applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import {composeWithDevTools} from 'redux-devtools-extension';
-import {productDetailsReducer, productListReducer} from './reducers/ProductReducer'
+import {productDetailsReducer, productListReducer,productDeleteReducer,productCreateReducer,productUpdateReducer,productReviewCreateReducer,productTopRatedReducer} from './reducers/ProductReducer'
 import {rentingListReducer,rentingDetailsReducer} from './reducers/RentingReducer'
 import {seedListReducer,seedDetailsReducer} from './reducers/SeedReducer'
 import {fertilizerListReducer,fertilizerDetailsReducer} from './reducers/FertilizerReducer'
@@ -33,6 +33,11 @@ const userInfoFromStorage = localStorage.getItem("userInfo")
 const reducer=combineReducers({
     productList:productListReducer,
     productDetails:productDetailsReducer,
+    productDelete:productDeleteReducer,
+    productCreate:productCreateReducer,
+    productUpdate:productUpdateReducer,
+    productReviewCreate:productReviewCreateReducer,
+    productTopRated:productTopRatedReducer,
     seedList:seedListReducer,
     seedDetails:seedDetailsReducer,
     fertilizerList:fertilizerListReducer,

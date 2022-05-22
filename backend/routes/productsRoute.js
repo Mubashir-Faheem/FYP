@@ -9,7 +9,7 @@ const {protect,admin}=require ('../middlewares/authMiddleware')
 //     res.json(products);
 // })
 // );
-router.route("/products").get(getProducts).post(protect,admin,createProduct)
+router.route('/').get(getProducts).post(protect,admin,createProduct)
 
 
 // router.get("/products/:id",(req,res)=>{
@@ -20,10 +20,10 @@ router.route("/products").get(getProducts).post(protect,admin,createProduct)
 
 
 // });
-router.route('/products/:id/reviews').post(protect,admin,createProductReview)
-router.get('/products/top',getTopProducts)
+router.route('/:id/reviews').post(protect,admin,createProductReview)
+router.get('/top',getTopProducts)
 //routing for single product
-router.route("/products/:id").get(getProduct).delete(protect,admin,deleteProduct)
+router.route("/:id").get(getProduct).delete(protect,admin,deleteProduct)
 .put(protect,admin,updateProduct); 
 
 module.exports=router;

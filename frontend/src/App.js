@@ -40,7 +40,8 @@ import RentingHome from './screens/RentingHome';
 import RentingDetails from './screens/RentingDetails'
 import UserEditScreen from './screens/UserEditScreen';
 import UserListScreen from './screens/UserListScreen';
-
+import ProductListScreen from './screens/ProductListScreen';
+import ProductEditScreen from './screens/ProductEditScreen'
 
 
 // import Cart from './screens/Cart'
@@ -82,6 +83,8 @@ function App() {
     {/* <RentingDetails/> */}
     {/* <UserEditScreen/> */}
     {/* <UserListScreen/> */}
+    {/* <ProductListScreen/> */}
+    {/* <ProductListScreen/> */}
 
 
 
@@ -118,14 +121,25 @@ function App() {
       <Route path="/order/:id" element={<OrderScreen/>} />
       <Route path="/admin/user/:id/edit" element={<UserEditScreen/>} />
       <Route path="/admin/userlist" element={<UserListScreen/>} />
+      <Route path="/admin/product/:id/edit" element={<ProductEditScreen/>} />
+      
+      <Route
+            path='/admin/productlist'
+            element={<ProductListScreen/>}
+            exact
+          />
+          <Route
+            path='/admin/productlist/:pageNumber'
+            component={<ProductListScreen/>}
+            exact
+          />
+
 
 
 
       
       
-      {/* <Route path="/cart" element={<CartScreen />} /> */}
-
-      {/* <Route path="/signup" element={< Register />} /> */}
+     
    
     </Routes>
     </Container>
