@@ -1,15 +1,15 @@
 const express=require('express');
-const {getProducts,getProduct} =require( '../controllers/productsController')
+const {getProducts,getProduct,createProduct,deleteProduct,updateProduct,createProductReview,getTopProducts} =require( '../controllers/productsController')
 
-const productrouter=express.Router();
-
+const router=express.Router();
+const {protect,admin}=require ('../middlewares/authMiddleware')
 //Routing for all products
 // router.get("/products",asyncHandler((req,res)=>{
 //     const products=await Product.find({});
 //     res.json(products);
 // })
 // );
-productrouter.route("/products").get(getProducts)
+router.route("/products").get(getProducts).post(protect,admin,createProduct)
 
 
 // router.get("/products/:id",(req,res)=>{
@@ -20,8 +20,10 @@ productrouter.route("/products").get(getProducts)
 
 
 // });
-
+router.route('/products/:id/reviews').post(protect,admin,createProductReview)
+router.get('/products/top',getTopProducts)
 //routing for single product
-productrouter.route("/products/:id").get(getProduct); 
+router.route("/products/:id").get(getProduct).delete(protect,admin,deleteProduct)
+.put(protect,admin,updateProduct); 
 
-module.exports=productrouter;
+module.exports=router;
