@@ -28,7 +28,7 @@ const orderSchema=mongoose.Schema({
             type:Number,
             required:true
         },
-        Product:{
+        product:{
             type:mongoose.Schema.Types.ObjectId,
             // required:true,
             ref:'Product'
@@ -53,7 +53,7 @@ const orderSchema=mongoose.Schema({
             required:true
         }
     },
-    payment:{
+    paymentMethod:{
         type:String,
         // required:true
     },
@@ -62,6 +62,11 @@ const orderSchema=mongoose.Schema({
         status:{type:String},
         update_time:{type:String},
         email_address:{type:String}
+    },
+    taxPrice:{
+        type:Number,
+        required:true,
+        default:0.0
     },
     shipppingPrice:{
         type:Number,

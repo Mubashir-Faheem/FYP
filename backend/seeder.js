@@ -60,15 +60,7 @@ const importData= async()=>{
         process.exit(1)
     }
 };
-        // console.log(Object.keys(products));
-
-// const result = Object.keys(products).map(key => {
-//   console.log(key);
-//   console.log(products[key]); 
-
-//   return {[key]: products[key]};
-// });
-// console.log(result);
+ 
 
        
 
