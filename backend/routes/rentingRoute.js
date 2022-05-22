@@ -1,5 +1,5 @@
 const express=require('express');
-const {getRenting} =require( '../controllers/rentingController')
+const {getRenting, getOneRenting} =require( '../controllers/rentingController')
 const Renting=require('../models/RentingModel')
 const router=express.Router();
 
@@ -22,6 +22,7 @@ router.route("/services").get(getRenting)
 // });
 
 //routing for single product
-// productrouter.route("/products/:id").get(getProduct); 
+// productrouter.route("/products/:id").get(getProduct);
+router.route("/services/:id").get(getOneRenting);  
 
 module.exports=router;

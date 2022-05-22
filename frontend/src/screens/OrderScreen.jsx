@@ -107,7 +107,8 @@ const OrderScreen = (match) => {
                         <Image src={item.image} alt={item.name} fluid />
                       </Col>
                       <Col>
-                        <Link to={`/product/${item.product}`}>{item.name}</Link>
+                        {/* <Link to={`/product/${item.product}`}>{item.name}</Link> */}
+                        <Link to={`/renting/${item.product}`}>{item.name}</Link>
                       </Col>
                       <Col md={4}>
                         {item.qty} X ${item.price} = ${item.price}

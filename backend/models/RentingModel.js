@@ -13,13 +13,17 @@ const rentingSchema=mongoose.Schema({
     name:{
     type:String
     },
-    // image:{
-    //     type:String
-    // },
+    image:{
+        type:String
+    },
     tool:{
         type:String
     },
     price:{
+        type:Number,
+        required:true
+    },
+    countinstock:{
         type:Number,
         required:true
     },

@@ -5,6 +5,7 @@ import {combineReducers,applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import {composeWithDevTools} from 'redux-devtools-extension';
 import {productDetailsReducer, productListReducer} from './reducers/ProductReducer'
+import {rentingListReducer,rentingDetailsReducer} from './reducers/RentingReducer'
 import {seedListReducer,seedDetailsReducer} from './reducers/SeedReducer'
 import {fertilizerListReducer,fertilizerDetailsReducer} from './reducers/FertilizerReducer'
 import {cartReducer} from './reducers/CartReducer'
@@ -36,6 +37,8 @@ const reducer=combineReducers({
     seedDetails:seedDetailsReducer,
     fertilizerList:fertilizerListReducer,
     fertilizerDetails:fertilizerDetailsReducer,
+    rentingList:rentingListReducer,
+    rentingDetails:rentingDetailsReducer,
     cart:cartReducer,
     userLogin: userLoginReducer,
   userRegister: userRegisterReducer,

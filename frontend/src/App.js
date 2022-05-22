@@ -37,6 +37,7 @@ import PaymentScreen from './screens/PaymentScreen'
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import OrderScreen from './screens/OrderScreen'
 import RentingHome from './screens/RentingHome';
+import RentingDetails from './screens/RentingDetails'
 
 
 
@@ -76,6 +77,7 @@ function App() {
     {/* <PlaceOrderScreen/> */}
     {/* <OrderScreen/> */}
     {/* <RentingHome/> */}
+    {/* <RentingDetails/> */}
 
 
       <Routes >
@@ -95,6 +97,7 @@ function App() {
       <Route path="/seeds/:id" element ={<SeedDetails />} />
       <Route path="/fertilizers/:id" element ={<FertilizerDetails />} />
       <Route path="/renting" element ={<RentingHome />} />
+      <Route path="/renting/:id" element ={<RentingDetails />} />
       <Route path="/forum" element={<Forum />} />
       <Route path="/videos" element={<Video />} />
       <Route path="/vg" element={<VirtualGarden/>} />

@@ -25,9 +25,18 @@ const location=useLocation()
 const history=useNavigate()
   useEffect(() => {
     if (id) {
+      // dispatch(addToCart(id));
       dispatch(addToCart(id, qty));
     }
-  }, [dispatch, id, qty]);
+  }
+  , [dispatch, id, qty]);
+  // , [dispatch, id]);
+  
+  useEffect(()=>{
+    if (id) {
+
+    }
+  })
  
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;

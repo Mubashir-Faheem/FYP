@@ -31,16 +31,9 @@ const ProductDetails = () => {
     // const[product,setProduct]=useState([]);
 useEffect(()=>{
 
-    // let {id}=useParams();
+   
     console.log("id",id)
-    // const fetchProduct=async ({})=>{
-    //     // const{data}=await axios.get(`/products:id/${match.id}`);
-    //     const{data}=await axios.get(`/products/${id}`)
-    //     setProduct(data);
-    // };
-    // fetchProduct()
-    // console.log(product)
-    // console.log("hello world",match.params.id)
+    
     dispatch(listProductDetails(id))
 },[dispatch]);
 let history=useNavigate()

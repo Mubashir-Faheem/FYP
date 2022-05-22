@@ -7,7 +7,15 @@ const getRenting=asyncHandler(async(req,res)=>{
     // throw new Error("Some error")
     res.json(services);
 })
-
+const getOneRenting=asyncHandler(async(req,res)=>{
+    const services=await Renting.findById(req.params.id);
+    if(services){
+        res.json(services);
+    }
+    else{
+        res.status(404).json({message:"Renting not found"});
+    }
+})
 
 
 
@@ -20,5 +28,5 @@ const getRenting=asyncHandler(async(req,res)=>{
 //         res.status(404).json({message:"Product not found"});
 //     }
 // })
-module.exports={getRenting}
+module.exports={getRenting,getOneRenting}
 
