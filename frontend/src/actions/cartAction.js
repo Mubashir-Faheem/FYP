@@ -28,6 +28,7 @@ export const addToCart = (id, qty) => async (dispatch, getState) => {
   }
  
   );
+
   
 
 // console.log(addToCart)

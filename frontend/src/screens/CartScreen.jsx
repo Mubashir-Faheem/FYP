@@ -16,27 +16,26 @@ import { addToCart, removeFromCart } from "../actions/cartAction"
 import {useParams,useNavigate,useLocation} from 'react-router-dom'
 
 const CartScreen = () => {
+  
   // const productId = match.params.id;
 const {id}=useParams()
 const location=useLocation()
   const qty = location.search ? Number(location.search.split("=")[1]) : 1;
-  console.log(id)
+  console.log(qty)
   const dispatch = useDispatch();
 const history=useNavigate()
   useEffect(() => {
     if (id) {
       // dispatch(addToCart(id));
       dispatch(addToCart(id, qty));
+      
     }
+    
   }
   , [dispatch, id, qty]);
   // , [dispatch, id]);
   
-  useEffect(()=>{
-    if (id) {
-
-    }
-  })
+  
  
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
