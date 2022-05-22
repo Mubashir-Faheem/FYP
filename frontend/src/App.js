@@ -38,6 +38,8 @@ import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import OrderScreen from './screens/OrderScreen'
 import RentingHome from './screens/RentingHome';
 import RentingDetails from './screens/RentingDetails'
+import UserEditScreen from './screens/UserEditScreen';
+import UserListScreen from './screens/UserListScreen';
 
 
 
@@ -78,6 +80,9 @@ function App() {
     {/* <OrderScreen/> */}
     {/* <RentingHome/> */}
     {/* <RentingDetails/> */}
+    {/* <UserEditScreen/> */}
+    {/* <UserListScreen/> */}
+
 
 
       <Routes >
@@ -111,6 +116,10 @@ function App() {
       <Route path="/payment" element={<PaymentScreen />}/>
       <Route path="/placeorder" element={<PlaceOrderScreen />}/>
       <Route path="/order/:id" element={<OrderScreen/>} />
+      <Route path="/admin/user/:id/edit" element={<UserEditScreen/>} />
+      <Route path="/admin/userlist" element={<UserListScreen/>} />
+
+
 
       
       

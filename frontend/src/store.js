@@ -15,7 +15,7 @@ import {
     orderPayReducer,
     orderListMyReducer,
   } from "./reducers/OrderReducer"
-  import {userLoginReducer,userRegisterReducer,userDetailsReducer,userListReducer,userUpdateProfileReducer,userDeleteReducer} from './reducers/UserReducers'
+  import {userLoginReducer,userRegisterReducer,userDetailsReducer,userListReducer,userUpdateProfileReducer,userDeleteReducer, userUpdateReducer} from './reducers/UserReducers'
 
 
 const cartItemsFromStorage = localStorage.getItem("cartItems")
@@ -44,10 +44,15 @@ const reducer=combineReducers({
   userRegister: userRegisterReducer,
   userDetails: userDetailsReducer,
   userUpdateProfile: userUpdateProfileReducer,
+  userList:userListReducer,
+  userDelete:userDeleteReducer,
+  userUpdate:userUpdateReducer,
     orderCreate: orderCreateReducer,
   orderDetails: orderDetailsReducer,
   orderPay: orderPayReducer,
   orderListMy: orderListMyReducer,
+  orderList:orderListMyReducer,
+  
 
 });
 const initialState={
