@@ -11,6 +11,7 @@ const seedRoutes=require('./routes/seedsRoute')
 const usersRoutes=require('./routes/UsersRoute')
 const orderRoutes=require('./routes/orderRoute')
 const rentingRoutes=require('./routes/rentingRoute')
+const uploadRoutes=require('./routes/uploadRoutes')
 
 const dotenv=require("dotenv");
 require('dotenv').config()
@@ -38,6 +39,7 @@ app.use("/api",seedRoutes)
 app.use("/api/users",usersRoutes)
 app.use("/api/orders",orderRoutes)
 app.use("/api",rentingRoutes)
+app.use('/api/upload',uploadRoutes)
 app.use(errorHandler);
 app.use(express.static('public'))
 app.use(express.static('backend'))
@@ -49,7 +51,9 @@ app.get("/",(req,res)=>{
 // app.get('/product/:id', function(req, res) { // url: /path/test
 //     console.log(req.params.id);  // result: test
 //   });
-  
+
+// const __dirname = path.resolve()
+// app.use('/uploads', express.static(path.join(__dirname, '/uploads')))
 
 const PORT=8080;
 app.listen(process.env.PORT || PORT,() =>{

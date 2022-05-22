@@ -30,7 +30,7 @@ const importData= async()=>{
         const createUser=await User.insertMany(users)
         const adminUser=createUser[0]._id
         //handling products
-        const sampleProducts=products.map(product =>{
+        const sampleProducts=products.map((product) =>{
             return {...product,user:adminUser}
         })
         await Product.insertMany(sampleProducts)
