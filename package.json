@@ -28,7 +28,8 @@
     "react-router-dom": "^6.0.2",
     "redux": "^4.2.0",
     "redux-devtools-extension": "^2.13.9",
-    "redux-thunk": "^2.4.1"
+    "redux-thunk": "^2.4.1",
+    "stripe": "^9.2.0"
   },
   "name": "kitchen-garden",
   "version": "1.0.0",

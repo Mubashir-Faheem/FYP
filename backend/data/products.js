@@ -52,7 +52,7 @@ const products =[
             
         {
            
-                name:"Pee Plant",
+                name:"Pea Plant",
                 image:'images/Cabbage.jpg',
                 description:"Beautiful Pee Plant",
                 price:650,
