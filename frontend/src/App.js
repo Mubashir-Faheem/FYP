@@ -17,11 +17,11 @@ import Forget from './screens/Forget';
 import Main from './screens/Main'
 import SeedDetails from './screens/SeedDetails';
 // import SeedScreen from './screens/SeedScreen';
-import Post from './screens/Blog/Post'
-import Posts from './screens/Blog/Posts';
-import Topbar from './screens/Blog/Topbar';
-// import SearchBar from './screens/Blog/SearchBar';
-import SinglePost from './screens/Blog/SinglePost';
+// import Post from './screens/Blog/Post'
+// import Posts from './screens/Blog/Posts';
+// import Topbar from './screens/Blog/Topbar';
+// // import SearchBar from './screens/Blog/SearchBar';
+// import SinglePost from './screens/Blog/SinglePost';
 import Fertilizerscreen from './screens/FertilizerScreen';
 import Forum from './screens/Forum';
 import Video from './screens/Videos';
@@ -99,10 +99,10 @@ function App() {
       <Route path="/seedscreen" element={<SeedHome />} />
       {/* <Route path="/fertscreen" element={<Fertilizerscreen />} /> */}
       <Route path="/fertscreen" element={<FertilizerHome />} />
-      <Route path="/posts" element={<Posts/>} />
+      {/* <Route path="/posts" element={<Posts/>} />
       <Route path="/post" element={<Post/>} />
       <Route path="/topbar" element={<Topbar/>} />
-      <Route path="/SinglePost" element={<SinglePost/>} />
+      <Route path="/SinglePost" element={<SinglePost/>} /> */}
       <Route path="/product/:id" element ={<ProductDetails />} />
       <Route path="/seeds/:id" element ={<SeedDetails />} />
       <Route path="/fertilizers/:id" element ={<FertilizerDetails />} />
