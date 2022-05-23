@@ -4,6 +4,7 @@ import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../actions/userAction";
+import '../App.css'
 
 const Header = () => {
   const userLogin = useSelector((state) => state.userLogin);
@@ -16,10 +17,11 @@ const Header = () => {
 
   return (
     <>
-      <Navbar bg="dark" expand="lg" variant="dark" collapseOnSelect>
-        <Container>
+    
+      <Navbar  bg="dark" expand="lg" variant="dark" collapseOnSelect  >
+        <Container >
           <LinkContainer to="/">
-            <Navbar.Brand>Garden Mart</Navbar.Brand>
+            <Navbar.Brand >Garden Mart</Navbar.Brand>
           </LinkContainer>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -87,6 +89,7 @@ const Header = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      
     </>
   );
 };

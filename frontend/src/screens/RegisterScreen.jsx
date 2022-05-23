@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Form, Button, Row, Col } from "react-bootstrap";
+import { Form, Button, Row, Col, Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/shared/message";
 import Loader from "../components/shared/loader";
@@ -40,41 +40,50 @@ const history=useNavigate()
 
   return (
     <>
+    <div style={{backgroundSize: 'cover',backgroundRepeat: "no-repeat",width: '115%',marginLeft:"-80px",
+  height: '500px',backgroundImage:`url("https://rb.gy/ik1hqv")`}}>
       <FormContainer>
-        <h1>Register</h1>
+        <br />
+        <Col style={{align:"center",marginLeft:"400px"}}>
+        <Card style={{width:"300px",backgroundColor:'#35654E'}}>
+        <h1 style={{color:'#F5FFFF'}}>Register</h1>
+        <br />
         {error && <Message varient="danger">{error}</Message>}
         {loading && <Loader />}
         {message && <Message variant="danger">{message}</Message>}
         <Form onSubmit={submitHandler}>
           <Form.Group controlId="email">
-            <Form.Label>Name</Form.Label>
+            <Form.Label style={{color:'#F5FFFF'}}> <strong> Name</strong></Form.Label>
             <Form.Control
               type="text"
               placeholder="enter Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
             ></Form.Control>
+            {/* <br /> */}
           </Form.Group>
           <Form.Group controlId="email">
-            <Form.Label>Email Address</Form.Label>
+            <Form.Label style={{color:'#F5FFFF'}}><strong> Email Address</strong></Form.Label>
             <Form.Control
               type="email"
               placeholder="enter email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             ></Form.Control>
+            {/* <br/> */}
           </Form.Group>
           <Form.Group controlId="password">
-            <Form.Label>Password</Form.Label>
+            <Form.Label style={{color:'#F5FFFF'}}><strong> Password</strong></Form.Label>
             <Form.Control
               type="password"
               placeholder="enter password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             ></Form.Control>
+             {/* <br/> */}
           </Form.Group>
           <Form.Group controlId="confirmPassword">
-            <Form.Label>Confirm Password</Form.Label>
+            <Form.Label style={{color:'#F5FFFF'}}><strong> Confirm Password</strong></Form.Label>
             <Form.Control
               type="password"
               placeholder="Re-enter password"
@@ -82,12 +91,13 @@ const history=useNavigate()
               onChange={(e) => setConfirmPassword(e.target.value)}
             ></Form.Control>
           </Form.Group>
+          <br/>
           <Button type="submit" varient="primary">
             Register
           </Button>
         </Form>
         <Row>
-          <Col>
+          <Col style={{color:'#F5FFFF'}}>
             Have an account !
             {/* <Link to={redirect ? `login?redirect=${redirect}` : "/login"}> */}
             <Link to={ "/login"}>
@@ -95,7 +105,10 @@ const history=useNavigate()
             </Link>
           </Col>
         </Row>
+        </Card>
+        </Col>
       </FormContainer>
+      </div>
     </>
   );
 };
