@@ -63,7 +63,7 @@ const RentingDetails = () => {
                     <h3>{renting && renting.name}</h3>
                 </ListGroupItem>
                 <ListGroupItem>
-                    Price:Rs. {renting &&renting.price}
+                    Price:Rs. {renting &&renting.price} /hr
                     </ListGroupItem>
                     <ListGroupItem>
                         {renting &&renting.tool}
@@ -80,7 +80,7 @@ const RentingDetails = () => {
                 {  renting.countinstock > 0 &&(
                     <ListGroupItem>
                      <Row>
-                         <Col >Times <p style={{color:"red",}}>(/hr)</p> 
+                         <Col style={{color:'red'}}>No. of Hours  
                          </Col>
                          <Form.Control as ="select" value={qty} onChange={(e)=> setQty(e.target.value)}>
                              {

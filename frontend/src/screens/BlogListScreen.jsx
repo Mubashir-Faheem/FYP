@@ -114,7 +114,7 @@ const BlogListScreen = () => {
                 <tr key={blog._id}>
                   <td>{blog._id}</td>
                   <td>{blog.name}</td>
-                  <td>Rs.{blog.description}</td>
+                  <td>{blog.description}</td>
                   {/* <td>{product.category}</td>
                   <td>{product.brand}</td> */}
                   
