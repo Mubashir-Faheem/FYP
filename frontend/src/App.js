@@ -45,6 +45,7 @@ import ProductEditScreen from './screens/ProductEditScreen'
 import OrderListScreen from './screens/OrderListScreen';
 import BlogHome from './screens/BlogHome';
 import BlogDetails from './screens/BlogDetails';
+import BlogListScreen from './screens/BlogListScreen';
 
 
 // import Cart from './screens/Cart'
@@ -91,6 +92,7 @@ function App() {
     {/* <OrderListScreen/> */}
     {/* <BlogHome/> */}
     {/* <BlogDetails/> */}
+    {/* <BlogListScreen/> */}
 
 
 
@@ -131,6 +133,7 @@ function App() {
       <Route path="/admin/orderlist" element={<OrderListScreen/>} />
       <Route path="/blogscreen" element={<BlogHome/>} />
       <Route path="/blog/:id" element={<BlogDetails/>} />
+      <Route path="/admin/bloglist" element={<BlogListScreen/>} />
 
       
       <Route
