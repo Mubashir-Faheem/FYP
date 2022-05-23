@@ -2,7 +2,7 @@ const products =[
     {
     
     name:"Mint Plant",
-    image:'https://www.almanac.com/sites/default/files/styles/max_1300x1300/public/image_nodes/mint-planting-growing-harvesting.jpg?itok=-hGyryYc',
+    image:'E:\7 Semester\kitchen-garden\FYP\frontend\public\images\Apple.jpg',
     description:"Beautiful Mint Plant",
     price:950,
     countinstock:25,
@@ -13,7 +13,7 @@ const products =[
 {
 
     name:"Bell Pepper Plant",
-    image:'E:\7 Semester\kitchen-garden\FYP\frontend\public\images\mint.jpg',
+    image:'frontend\public\images\Apple.jpg',
     description:"Beautiful Bell Pepper Plant",
     price:550,
     countinstock:25,
@@ -22,7 +22,7 @@ const products =[
 },{
    
     name:"Cauliflower Plant",
-    image:'images/Cabbage.jpg',
+    image:'E:/7 Semester/kitchen-garden/FYP/frontend/public/images/Apple.jpg',
     description:"Beautiful Rose Plant",
     price:350,
     countinstock:0,
@@ -32,7 +32,7 @@ const products =[
 {
     
         name:"Coriander Plant",
-        image:'images/Cabbage.jpg',
+        image:'images/Apple.jpg',
         description:"Beautiful Coriander Plant",
         price:200,
         countinstock:25,
