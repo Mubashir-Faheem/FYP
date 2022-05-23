@@ -52,7 +52,7 @@ const Main = () => {
 <h3>Services</h3>
        <br /><br /><br />
         
-       <LinkContainer to="/Posts" style={{display: 'left',  justifyContent:'left', alignItems:'left', }} > 
+       <LinkContainer to="/blogscreen" style={{display: 'left',  justifyContent:'left', alignItems:'left', }} > 
 
 <div className="btn btn-dark"   >    <i class="left" ></i> &nbsp; Blogs</div>
 
