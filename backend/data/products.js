@@ -2,7 +2,7 @@ const products =[
     {
     
     name:"Mint Plant",
-    image:'E:\7 Semester\kitchen-garden\FYP\frontend\public\images\Apple.jpg',
+    image:'images/Mint.jpeg',
     description:"Beautiful Mint Plant",
     price:950,
     countinstock:25,
@@ -13,7 +13,7 @@ const products =[
 {
 
     name:"Bell Pepper Plant",
-    image:'frontend\public\images\Apple.jpg',
+    image:'images/bellpepper.jpg',
     description:"Beautiful Bell Pepper Plant",
     price:550,
     countinstock:25,
@@ -22,7 +22,7 @@ const products =[
 },{
    
     name:"Cauliflower Plant",
-    image:'E:/7 Semester/kitchen-garden/FYP/frontend/public/images/Apple.jpg',
+    image:'images/cauliflower.jpg',
     description:"Beautiful Rose Plant",
     price:350,
     countinstock:0,
@@ -32,7 +32,7 @@ const products =[
 {
     
         name:"Coriander Plant",
-        image:'images/Apple.jpg',
+        image:'images/coriander.jpg',
         description:"Beautiful Coriander Plant",
         price:200,
         countinstock:25,
@@ -42,7 +42,7 @@ const products =[
     {
         
             name:"Green Chilli Plant",
-            image:'images/Cabbage.jpg',
+            image:'images/greenchilli.jpg',
             description:"Beautiful Green Chilli Plant",
             price:700,
             countinstock:25,
@@ -53,8 +53,8 @@ const products =[
         {
            
                 name:"Pea Plant",
-                image:'images/Cabbage.jpg',
-                description:"Beautiful Pee Plant",
+                image:'images/photo-1562690868-60bbe7293e94.jpg',
+                description:"Beautiful Pea Plant",
                 price:650,
                 countinstock:2,
                 ratings:5,
@@ -63,7 +63,7 @@ const products =[
             {
                 
                     name:"Pomegranate Plant",
-                    image:'images/Cabbage.jpg',
+                    image:'images/pomegranate.jpg',
                     description:"Beautiful Pomegranate Plant",
                     price:290,
                     countinstock:25,
@@ -73,7 +73,7 @@ const products =[
                 {
                    
                         name:"Rose Plant",
-                        image:'images/Cabbage.jpg',
+                        image:'images/rose.jpg',
                         description:"Beautiful Rose Plant",
                         price:1000,
                         countinstock:0,
@@ -85,7 +85,7 @@ const products =[
                             {
                                 
                                     name:"Tomato Plant",
-                                    image:'images/Cabbage.jpg',
+                                    image:'images/tomato.jpg',
                                     description:"Beautiful Tomato Plant",
                                     price:600,
                                     countinstock:25,
