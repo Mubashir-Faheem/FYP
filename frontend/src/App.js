@@ -47,6 +47,8 @@ import BlogHome from './screens/BlogHome';
 import BlogDetails from './screens/BlogDetails';
 import BlogListScreen from './screens/BlogListScreen';
 import BlogEditScreen from './screens/BlogEditScreen'
+import RentingListScreen from './screens/RentingListScreen'
+import RentingEditScreen from './screens/RentingEditScreen';
 
 
 // import Cart from './screens/Cart'
@@ -95,6 +97,8 @@ function App() {
     {/* <BlogDetails/> */}
     {/* <BlogListScreen/> */}
     {/* <BlogEditScreen/> */}
+    {/* <RentingListScreen/> */}
+    {/* <RentingEditScreen/> */}
 
 
 
@@ -137,6 +141,8 @@ function App() {
       <Route path="/blog/:id" element={<BlogDetails/>} />
       <Route path="/admin/bloglist" element={<BlogListScreen/>} />
       <Route path="/admin/blog/:id/edit" element={<BlogEditScreen/>} />
+      <Route path="/admin/rentinglist" element={<RentingListScreen/>} />
+      <Route path="/admin/service/:id/edit" element={<RentingEditScreen/>} />
 
       
       <Route
