@@ -80,6 +80,8 @@ const dataDestroy=async()=>{
     try {
         await Order.deleteMany()
         await Product.deleteMany()
+        await Blog.deleteMany()
+
         // await Review.deleteMany()
         await User.deleteMany()
         await Fertlizer.deleteMany()

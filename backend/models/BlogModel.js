@@ -37,5 +37,5 @@ const blogSchema=mongoose.Schema({
 
 },{timestamps:true})
 
-const Blog=mongoose.model('Blog',blogSchema)
-module.exports=Blog
+const Blogs=mongoose.model('Blogs',blogSchema)
+module.exports=Blogs
