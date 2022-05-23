@@ -5,6 +5,7 @@ import {combineReducers,applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import {composeWithDevTools} from 'redux-devtools-extension';
 import {productDetailsReducer, productListReducer,productDeleteReducer,productCreateReducer,productUpdateReducer,productReviewCreateReducer,productTopRatedReducer} from './reducers/ProductReducer'
+import {blogListReducer,blogDetailsReducer,blogDeleteReducer,blogCreateReducer,blogUpdateReducer} from './reducers/BlogReducer'
 import {rentingListReducer,rentingDetailsReducer} from './reducers/RentingReducer'
 import {seedListReducer,seedDetailsReducer} from './reducers/SeedReducer'
 import {fertilizerListReducer,fertilizerDetailsReducer} from './reducers/FertilizerReducer'
@@ -60,6 +61,11 @@ const reducer=combineReducers({
   orderListMy: orderListMyReducer,
   orderList:orderListReducer,
   orderDeliver:orderDeliverReducer,
+  blogList:blogListReducer,
+  blogDetails:blogDetailsReducer,
+  blogDelete:blogDeleteReducer,
+  blogCreate:blogCreateReducer,
+  blogUpdate:blogUpdateReducer
   
 
 });
