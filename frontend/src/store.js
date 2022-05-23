@@ -6,7 +6,7 @@ import thunk from 'redux-thunk';
 import {composeWithDevTools} from 'redux-devtools-extension';
 import {productDetailsReducer, productListReducer,productDeleteReducer,productCreateReducer,productUpdateReducer,productReviewCreateReducer,productTopRatedReducer} from './reducers/ProductReducer'
 import {blogListReducer,blogDetailsReducer,blogDeleteReducer,blogCreateReducer,blogUpdateReducer} from './reducers/BlogReducer'
-import {rentingListReducer,rentingDetailsReducer} from './reducers/RentingReducer'
+import {rentingListReducer,rentingDetailsReducer,rentingDeleteReducer,rentingCreateReducer,rentingUpdateReducer,rentingReviewCreateReducer,rentingTopRatedReducer} from './reducers/RentingReducer'
 import {seedListReducer,seedDetailsReducer} from './reducers/SeedReducer'
 import {fertilizerListReducer,fertilizerDetailsReducer} from './reducers/FertilizerReducer'
 import {cartReducer} from './reducers/CartReducer'
@@ -47,6 +47,11 @@ const reducer=combineReducers({
     fertilizerDetails:fertilizerDetailsReducer,
     rentingList:rentingListReducer,
     rentingDetails:rentingDetailsReducer,
+    rentingDelete:rentingDeleteReducer,
+    rentingCreate:rentingCreateReducer,
+    rentingUpdate:rentingUpdateReducer,
+    rentingReviewCreate:rentingReviewCreateReducer,
+    rentingTopRated:rentingTopRatedReducer,
     cart:cartReducer,
     userLogin: userLoginReducer,
   userRegister: userRegisterReducer,
