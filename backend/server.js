@@ -12,6 +12,7 @@ const usersRoutes=require('./routes/UsersRoute')
 const orderRoutes=require('./routes/orderRoute')
 const rentingRoutes=require('./routes/rentingRoute')
 const uploadRoutes=require('./routes/uploadRoutes')
+const blogRoutes=require('./routes/blogsRoute')
 
 const dotenv=require("dotenv");
 require('dotenv').config()
@@ -34,6 +35,7 @@ res.send("<h1>Welcome to node serverss</h1>");
 });
 
 app.use("/api/products",productRoutes);
+app.use("/api/blogs",blogRoutes);
 app.use("/api",fertilizerRoutes)
 app.use("/api",seedRoutes)
 app.use("/api/users",usersRoutes)

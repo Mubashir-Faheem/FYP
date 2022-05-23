@@ -12,6 +12,8 @@ const fertilizers=require('./data/fertilizers')
 const seeds=require('./data/seeds')
 const renting=require('./data/renting')
 const Renting=require('./models/RentingModel')
+const blogs=require('./data/blogs')
+const Blog=require('./models/BlogModel')
 // const connectDB=require('./config/config');
 const connectDb = require('./config/config');
 dotenv.config();
@@ -26,6 +28,7 @@ const importData= async()=>{
         // await Review.deleteMany()
         await User.deleteMany()
         await Renting.deleteMany()
+        await Blog.deleteMany()
         //hadnling admin and general users
         const createUser=await User.insertMany(users)
         const adminUser=createUser[0]._id
@@ -34,6 +37,12 @@ const importData= async()=>{
             return {...product,user:adminUser}
         })
         await Product.insertMany(sampleProducts)
+
+        //handling blogs
+        const sampleBlogs=blogs.map((blog) =>{
+            return {...blog,user:adminUser}
+        })
+        await Blog.insertMany(sampleBlogs)
         //handling fertilizers
         const sampleFertilizers=fertilizers.map(fertilizer =>{
             return {...fertilizer,user:adminUser}
@@ -46,11 +55,13 @@ const importData= async()=>{
         })
         await Seed.insertMany(sampleSeeds)
 
-        //handling products
+        //handling renting
         const sampleRenting=renting.map(renting =>{
             return {...renting,user:adminUser}
         })
         await Renting.insertMany(sampleRenting)
+
+        
 
         
         console.log("Done");
