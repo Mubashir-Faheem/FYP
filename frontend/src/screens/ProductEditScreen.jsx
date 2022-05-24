@@ -20,7 +20,7 @@ const {id}=useParams()
   // const [category, setCategory] = useState('')
   const [countinstock, setcountinstock] = useState(0)
   const [description, setDescription] = useState('')
-  const [uploading, setUploading] = useState(false)
+  const [uploading, setUploading] = useState('' )
 
   const dispatch = useDispatch()
 
@@ -51,6 +51,7 @@ const {id}=useParams()
         // setCategory(product.category)
         setcountinstock(product.countinstock)
         setDescription(product.description)
+        
       }
     }
   }, [dispatch, history, id, product, successUpdate])
@@ -129,22 +130,34 @@ const {id}=useParams()
               ></Form.Control>
             </Form.Group>
 
-            <Form.Group controlId='image'>
+            <Form.Group 
+            controlId='image'>
               <Form.Label>Image</Form.Label>
               <Form.Control
                 type='text'
+                
                 placeholder='Enter image url'
                 value={image}
                 onChange={(e) => setImage(e.target.value)}
               ></Form.Control>
-              {/* <Form.File
+
+{/* <Form.Control
+                type='file'
+                
+                placeholder='Enter image url'
+                value={image}
+                onChange={(e) => setUploading()}
+              ></Form.Control> 
+              <Form
+              
                 id='image-file'
                 label='Choose File'
                 custom
                 onChange={uploadFileHandler}
-              ></Form.File> */}
+              ></Form> */}
               {uploading && <Loader />}
             </Form.Group>
+            
 
             {/* <Form.Group controlId='brand'>
               <Form.Label>Brand</Form.Label>
