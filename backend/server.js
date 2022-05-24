@@ -62,6 +62,3 @@ app.listen(process.env.PORT || PORT,() =>{
     console.log(`Server is in ${process.env.NODE_ENV} Mode on Port ${process.env.PORT}`);
 })
 
-// app.listen(8080,() =>{
-//     console.log("server is running on 8080 port");
-// });

@@ -15,7 +15,7 @@ import Main from './screens/Main'
 import SeedDetails from './screens/SeedDetails';
 import Forum from './screens/Forum';
 import Video from './screens/Videos';
-// import VirtualGarden from './screens/Virtual Garden/Virtual Garden'
+import VirtualGarden from './components/Virtual Garden/Garden'
 import SeedHome from './screens/SeedHome'
 import FertilizerHome from './screens/FertilizerHome';
 import FertilizerDetails from './screens/FertilizerDetails'
@@ -47,7 +47,7 @@ function App() {
     <Router>
     <Header/>
     <main className="my-3"><Container>
-     
+     {/* <VirtualGarden/> */}
       <Routes >
       <Route path="/" element={<Main />} exact/>
 
@@ -61,7 +61,7 @@ function App() {
       <Route path="/renting/:id" element ={<RentingDetails />} />
       <Route path="/forum" element={<Forum />} />
       <Route path="/videos" element={<Video />} />
-      {/* <Route path="/vg" element={<VirtualGarden/>} /> */}
+      <Route path="/vg" element={<VirtualGarden/>} />
       <Route path="/login" element={<LoginScreen/>} />
       <Route path="/shipping" element={<ShippingScreen/>} />
       <Route path="/profile" element={<ProfileScreen/>} />
