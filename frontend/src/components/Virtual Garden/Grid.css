@@ -24,3 +24,11 @@ table td{
   color: yellow;
 }
 
+@keyframes growth {
+  0% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 4rem;
+  }
+}

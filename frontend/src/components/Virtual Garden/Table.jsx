@@ -72,7 +72,13 @@ const Table = ({ data }) => {
         placeholder="Search here ..."
         setTitle={handleTitle}
       ></SearchBar> */}
-      <Col style={{marginLeft:'400px'}}>
+<Row>
+      <Col md={3}>
+      <h1 style={{animation: 'growth 3s',
+  animationFillMode: 'backwards',
+  fontSize: '4rem',color:'#1D4B2C'}}> Welcome To Virtual Garden</h1>
+      </Col>
+      <Col style={{marginLeft:'550px'}}>
       <Card style={{height:'300px',backgroundImage:"url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGxhbnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500')"}}>
           
      <h3 style={{color:'#F5FFFF'}}>Set Rows</h3>
@@ -117,7 +123,9 @@ const Table = ({ data }) => {
           );
         })}
       </table>
+      </Row>
     </div>
+    
   );
 };
 export default Table;
