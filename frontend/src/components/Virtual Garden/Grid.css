@@ -1,0 +1,26 @@
+
+
+table{
+  background-color:rgb(71, 101, 71);
+} 
+table td{
+  border: 1px solid rgb(5, 19, 7);
+  width: 384px;
+  height: 150px;
+}
+
+.visually-hidden {
+ 
+  clip-path: inset(50%);
+  height: 20px;
+  overflow: hidden;
+  position: center;
+  white-space: nowrap;
+  width: 350px;
+  margin-left: 50px;
+
+}
+.cont2 {
+  color: yellow;
+}
+
