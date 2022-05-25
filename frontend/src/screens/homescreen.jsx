@@ -31,7 +31,7 @@ const HomeScreen = () => {
       ) : (
        
         <Row>
-           <h1>Products</h1>
+           <h1 style={{color:'#1D4B2C'}}>Products</h1>
           {
           products.map((product) => (
             

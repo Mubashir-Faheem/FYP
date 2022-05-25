@@ -26,7 +26,7 @@ const history=useNavigate()
 
   return (
     <>
-      <h1>Orders</h1>
+      <h1 style={{color:'#1D4B2C'}}>Orders</h1>
       {loading ? (
         <Loader />
       ) : error ? (

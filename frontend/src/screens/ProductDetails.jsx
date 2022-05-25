@@ -65,7 +65,7 @@ const addToCartHandler = ()=>{
                     <i class="fas fa-arrow-left"></i> &nbsp; Go Back
             </Link>
                 <Row >
-                 <Col md={6}>
+                 <Col md={5}>
                                 
                 <Card className="my-3 p-3 rounded" style={{width:'440px',height:'440px'}}>
 
@@ -74,11 +74,11 @@ const addToCartHandler = ()=>{
             </Card> 
         </Col>
         
-        <Col md={3}>
-        <Card className="my-3 p-3 rounded">
+        <Col md={3} >
+        <Card className="my-3 p-3 rounded" >
             <ListGroup variant="flush">
                 <ListGroupItem>
-                    <h3>{product && product.name}</h3>
+                    <h3 style={{color:'#1D4B2C'}}>{product && product.name}</h3>
                 </ListGroupItem>
     
                 <ListGroupItem>
@@ -129,7 +129,7 @@ const addToCartHandler = ()=>{
     }
     {/* <LinkContainer to="/cart"> */}
                 <ListGroupItem>
-                    <Button id="btn" className="btn-block" type="button" to="/CartScreen" onClick={addToCartHandler} >Add to Cart </Button>
+                    <Button id="btn" className="btn-success" type="button" to="/CartScreen" onClick={addToCartHandler} >Add to Cart </Button>
                     
                   
                 </ListGroupItem>

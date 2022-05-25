@@ -28,12 +28,12 @@ const BlogHome = () => {
       ) : (
        
         <Row>
-           <h1>BLOGS</h1>
+           <h1 style={{color:'#1D4B2C'}}>BLOGS</h1>
           {
           blogs.map((blog) => (
             
-            <Col key={blog._id} md={3}>
-              <BlogScreen blog={blog} />
+            <Col key={blog._id} md={3} >
+              <BlogScreen  blog={blog}  />
             </Col>
           ))}
         </Row>

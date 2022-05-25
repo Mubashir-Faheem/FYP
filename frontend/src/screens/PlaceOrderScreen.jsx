@@ -61,10 +61,10 @@ const PlaceOrderScreen = ({ }) => {
     <>
       <CheckOutStep step1 step2 step3 step4 />
       <Row>
-        <Col md={8}>
+        <Col md={8} >
           <ListGroup variant="flush">
             <ListGroup.Item>
-              <h2>Shipping</h2>
+              <h2 style={{color:'#1D4B2C'}}>Shipping</h2>
               <p>
                 <strong>Address :</strong>
                 {cart.shippingAddress.address}&nbsp;
@@ -74,15 +74,15 @@ const PlaceOrderScreen = ({ }) => {
               </p>
             </ListGroup.Item>
             <ListGroup.Item>
-              <h2>Payment Method</h2>
+              <h2 style={{color:'#1D4B2C'}}>Payment Method</h2>
               <p>
                 <strong>{cart.paymentMethod}</strong>
               </p>
             </ListGroup.Item>
             <ListGroup.Item>
-              <h2>Order Items</h2>
+              <h2 style={{color:'#1D4B2C'}}>Order Items</h2>
               {cart.cartItems.length === 0 ? (
-                <Message>Your Cart is Empty</Message>
+                <Message style={{color:'#1D4B2C'}}>Your Cart is Empty</Message>
               ) : (
                 <ListGroup variant="flush">
                   {cart.cartItems.map((item, index) => (
@@ -111,11 +111,11 @@ const PlaceOrderScreen = ({ }) => {
           <Card>
             <ListGroup variant="flush">
               <ListGroup.Item>
-                <h2>Order Summary</h2>
+                <h2 style={{color:'#1D4B2C'}}>Order Summary</h2>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Items</Col>
+                  <Col >Items</Col>
                   <Col>Rs.{cart.itemsPrice}</Col>
                 </Row>
                 <Row>
@@ -136,7 +136,7 @@ const PlaceOrderScreen = ({ }) => {
               </ListGroup.Item>
               <Button
                 type="button"
-                className="btn-block"
+                className="btn-success"
                 disabled={cart.cartItems === 0}
                 onClick={placeOrderHandler}
               >

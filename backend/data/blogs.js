@@ -1,17 +1,17 @@
 const blogs =[
     {
     
-    name:"Blog about Growing a Garden from Start",
-    image:'images/garden.jpg',
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a mauris a odio maximus pretium at vel elit. Donec scelerisque id sem ut dignissim. Donec dapibus lorem eu purus sollicitudin, ac lobortis orci rutrum. Nam nec venenatis sapien. Cras vel scelerisque odio, ut venenatis erat. Maecenas vitae quam vitae lorem fringilla lacinia eu ac elit. In at elit est. Phasellus sapien massa, luctus in malesuada eget, varius et tortor. Duis bibendum leo a auctor dictum. Nullam vitae risus mauris. Nullam faucibus erat eget accumsan accumsan. Pellentesque quis arcu dictum, molestie turpis non, sagittis dui. Aenean sed turpis ante. Nunc aliquam, odio et aliquet fringilla, lacus nisi faucibus neque, sit amet condimentum odio nisl in tellus. Aliquam dignissim sodales volutpat. Quisque efficitur justo finibus pulvinar faucibus.",
+    name:"Garden Weeds and Words",
+    image:'images/beauty_of_nature_17.jpg',
+    description:"This blog is a playful look at gardening from all angles by Andrew O’Brien. Recent blog posts have covered gardening clothes (as he posed the question of ‘do you ever garden wearing jeans?’ to his twitter audience) and a blog entitled ‘You snooze, you lose’- which was a fantastic post pointing out that February is NOT a time to rest in your garden.",
 
 },
 
 {
     
-    name:"Blog about maintaing a garden",
-    image:'images/apple.jpg',
-    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a mauris a odio maximus pretium at vel elit. Donec scelerisque id sem ut dignissim. Donec dapibus lorem eu purus sollicitudin, ac lobortis orci rutrum. Nam nec venenatis sapien. Cras vel scelerisque odio, ut venenatis erat. Maecenas vitae quam vitae lorem fringilla lacinia eu ac elit. In at elit est. Phasellus sapien massa, luctus in malesuada eget, varius et tortor. Duis bibendum leo a auctor dictum. Nullam vitae risus mauris. Nullam faucibus erat eget accumsan accumsan. Pellentesque quis arcu dictum, molestie turpis non, sagittis dui. Aenean sed turpis ante. Nunc aliquam, odio et aliquet fringilla, lacus nisi faucibus neque, sit amet condimentum odio nisl in tellus. Aliquam dignissim sodales volutpat. Quisque efficitur justo finibus pulvinar faucibus.",
+    name:"Fennel and Fern",
+    image:'images/beauty_of_nature_17.jpg',
+    description:"If you’re not seduced by the photography used on this blog site, then you certainly will be by the words. This site is actually a collective, so features blogs from more than one writer. Recent posts have celebrated Hamamelis in the winter garden, as well as suggested ways to inject a contemporary feel into your gardening containers.",
 
 },
 

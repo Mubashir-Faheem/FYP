@@ -60,7 +60,7 @@ const RentingDetails = () => {
         <Card className="my-3 p-3 rounded">
             <ListGroup variant="flush">
                 <ListGroupItem>
-                    <h3>{renting && renting.name}</h3>
+                    <h3 style={{color:'#1D4B2C'}}>{renting && renting.name}</h3>
                 </ListGroupItem>
                 <ListGroupItem>
                     Price:Rs. {renting &&renting.price} /hr

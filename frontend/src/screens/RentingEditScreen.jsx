@@ -101,11 +101,11 @@ const RentingEditScreen = () => {
 
   return (
     <>
-    <Link to='/admin/rentinglist' className='btn btn-light my-3'>
+    <Link to='/admin/rentinglist' className='btn btn-dark my-3'>
         Go Back
       </Link>
       <FormContainer>
-        <h1>Edit Service</h1>
+        <h1 style={{color:'#1D4B2C'}}>Edit Service</h1>
         {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
         {loading ? (
@@ -190,8 +190,8 @@ const RentingEditScreen = () => {
                 onChange={(e) => setTool(e.target.value)}
               ></Form.Control>
             </Form.Group>
-
-            <Button type='submit' variant='primary'>
+<br />
+            <Button type='submit' variant='primary' className='btn-success'>
               Update
             </Button>
           </Form>

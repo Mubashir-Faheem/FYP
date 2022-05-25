@@ -38,6 +38,8 @@ const BlogDetails = () => {
                 <Link to="/blogscreen " className="btn btn-dark">
                     <i class="fas fa-arrow-left"></i> &nbsp; Go Back
             </Link>
+            <br />
+            <br />
                 <Row>
                  <Col md={12}>
                                 
@@ -53,7 +55,7 @@ const BlogDetails = () => {
         {/* <Col className="my-3 p-3 rounded" style={{textAlign:'center'}}> */}
             <ListGroup variant="flush">
                 <ListGroupItem >
-                    <h3 >{blog && blog.name}</h3>
+                    <h3 style={{color:'#1D4B2C'}}>{blog && blog.name}</h3>
                 </ListGroupItem>
                 </ListGroup>
                 </Col>

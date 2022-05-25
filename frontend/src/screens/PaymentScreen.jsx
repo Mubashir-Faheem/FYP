@@ -22,10 +22,10 @@ const PaymentScreen = () => {
   return (
     <>
       <CheckoutStep step1 step2 step3 />
-      <h1>Payment Method</h1>
+      <h1 style={{color:'#1D4B2C'}}>Payment Method</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group>
-          <Form.Label as="legend">Select Payment Method</Form.Label>
+          <Form.Label as="legend" style={{color:'#1D4B2C'}}>Select Payment Method</Form.Label>
           <Col>
             <Form.Check
               type="radio"
@@ -46,7 +46,8 @@ const PaymentScreen = () => {
             ></Form.Check>
           </Col>
         </Form.Group>
-        <Button type="submit" variant="primary">
+        <br />
+        <Button type="submit" variant="success">
           Continue
         </Button>
       </Form>

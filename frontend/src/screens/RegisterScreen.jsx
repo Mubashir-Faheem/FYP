@@ -92,7 +92,7 @@ const history=useNavigate()
             ></Form.Control>
           </Form.Group>
           <br/>
-          <Button type="submit" varient="primary">
+          <Button type="submit" varient="primary" className="btn-success">
             Register
           </Button>
         </Form>

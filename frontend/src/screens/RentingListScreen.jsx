@@ -79,10 +79,10 @@ const RentingListScreen = () => {
     <>
      <Row className='align-items-center'>
         <Col>
-          <h1>Services</h1>
+          <h1 style={{color:'#1D4B2C'}}>Services</h1>
         </Col>
         <Col className='text-right'>
-          <Button className='my-3' onClick={createRentingHandler}>
+          <Button className='btn-success' onClick={createRentingHandler}>
             <i className='fas fa-plus'></i> Create Service
           </Button>
         </Col>

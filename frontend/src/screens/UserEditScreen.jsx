@@ -60,11 +60,11 @@ const history=useNavigate()
 
   return (
     <>
-      <Link to='/admin/userlist' className='btn btn-light my-3'>
+      <Link to='/admin/userlist' className='btn btn-dark my-3'>
         Go Back
       </Link>
       <FormContainer>
-        <h1>Edit User</h1>
+        <h1 style={{color:'#1D4B2C'}}>Edit User</h1>
         {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
         {loading ? (
@@ -92,7 +92,7 @@ const history=useNavigate()
                 onChange={(e) => setEmail(e.target.value)}
               ></Form.Control>
             </Form.Group>
-
+<br />
             <Form.Group controlId='isadmin'>
               <Form.Check
                 type='checkbox'
@@ -102,7 +102,7 @@ const history=useNavigate()
               ></Form.Check>
             </Form.Group>
 
-            <Button type='submit' variant='primary'>
+            <Button type='submit' variant='primary' className='btn-success'>
               Update
             </Button>
           </Form>

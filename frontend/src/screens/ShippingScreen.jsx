@@ -28,7 +28,7 @@ let history=useNavigate();
 
   return (
     <>
-      <CheckoutStep step1 step2 />
+      <CheckoutStep step1 step2   />
       <FromContainer>
         <Form onSubmit={submitHandler}>
           <Form.Group controlId="address">
@@ -71,7 +71,8 @@ let history=useNavigate();
               
             ></Form.Control>
           </Form.Group>
-          <Button type="submit" variant="primary">
+          <br />
+          <Button type="submit" variant="success">
             continue
           </Button>
         </Form>

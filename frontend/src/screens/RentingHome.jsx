@@ -51,7 +51,7 @@ console.log(rentings)
       ) : (
         
         <Row>
-           <h1>Renting Services</h1>
+           <h1 style={{color:'#1D4B2C'}}>Renting Services</h1>
           {
           rentings.map((renting) => (
             

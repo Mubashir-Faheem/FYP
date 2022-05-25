@@ -52,7 +52,7 @@ const history=useNavigate()
     <>
       <Row>
         <Col md={8}>
-          <h1>Shopping Cart</h1>
+          <h1 style={{color:'#1D4B2C'}}>Shopping Cart</h1>
           {cartItems.length === 0 ? (
             <Message>
               Your Cart is Empty !<Link to="/">Go Back</Link>
@@ -62,7 +62,7 @@ const history=useNavigate()
               {cartItems.map((item) => (
                 <ListGroupItem>
                   <Row>
-                    <Col md={2}>
+                    <Col md={2} >
                       {/* <Image src={item && item.image} alt={item.name} fluid rounded /> */}
                       <Card.Img variant="top" src={`../${item && item.image}` }  />
                     </Col>
@@ -107,7 +107,7 @@ const history=useNavigate()
           <Card>
             <ListGroup variant="flush">
               <ListGroupItem>
-                <h2>
+                <h2 style={{color:'#1D4B2C'}}>
                   subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)}
                   ) items
                 </h2>
@@ -118,7 +118,7 @@ const history=useNavigate()
               </ListGroupItem>
               <Button
                 type="button"
-                className="btn-block"
+                className="btn-success"
                 disabled={cartItems.length === 0}
                 onClick={checkout}
               >

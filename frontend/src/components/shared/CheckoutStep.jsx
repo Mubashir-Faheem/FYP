@@ -1,10 +1,11 @@
 import React from "react";
-import { Nav } from "react-bootstrap";
+import { Col, Nav } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
 const CheckoutStep = ({ step1, step2, step3, step4 }) => {
   return (
     <>
+    <Col style={{color:'#1D4B2C'}}>
       <Nav className="justify-content-center mb-4">
         <Nav.Item>
           {step1 ? (
@@ -43,6 +44,7 @@ const CheckoutStep = ({ step1, step2, step3, step4 }) => {
           )}
         </Nav.Item>
       </Nav>
+      </Col>
     </>
   );
 };

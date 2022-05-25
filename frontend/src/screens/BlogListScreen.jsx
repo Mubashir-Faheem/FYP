@@ -80,10 +80,10 @@ const BlogListScreen = () => {
     <>
     <Row className='align-items-center'>
         <Col>
-          <h1>Blogs</h1>
+          <h1 style={{color:'#1D4B2C'}}>Blogs</h1>
         </Col>
         <Col className='text-right'>
-          <Button className='my-3' onClick={createBlogHandler}>
+          <Button className='btn-success' onClick={createBlogHandler}>
             <i className='fas fa-plus'></i> Create Blog
           </Button>
         </Col>

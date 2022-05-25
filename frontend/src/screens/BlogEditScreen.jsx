@@ -77,11 +77,11 @@ const dispatch=useDispatch()
 
   return (
     <>
-    <Link to='/admin/bloglist' className='btn btn-light my-3'>
+    <Link to='/admin/bloglist' className='btn btn-dark my-3'>
         Go Back
       </Link>
       <FormContainer>
-        <h1>Edit Blog</h1>
+        <h1 style={{color:'#1D4B2C'}}>Edit Blog</h1>
         {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
         {loading ? (
@@ -135,7 +135,7 @@ const dispatch=useDispatch()
               {/* </Form.Control> */}
             
             <br />
-            <Button type='submit' variant='primary'>
+            <Button type='submit' variant='primary' className='btn-success'>
               Update
             </Button>
           </Form>

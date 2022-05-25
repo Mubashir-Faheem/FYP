@@ -68,7 +68,7 @@ return (
 
         <Card.Text as="div">
       <div className="my-3">Rs.
-          {renting &&renting.price} 
+          {renting &&renting.price} /hr
 
       </div>
     </Card.Text>

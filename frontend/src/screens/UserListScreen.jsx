@@ -35,7 +35,7 @@ const history=useNavigate()
 
   return (
     <>
-      <h1>Users</h1>
+      <h1 style={{color:'#1D4B2C'}}>Users</h1>
       {loading ? (
         <Loader />
       ) : error ? (
