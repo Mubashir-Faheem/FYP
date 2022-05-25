@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/shared/message";
 import CheckOutStep from "../components/shared/CheckoutStep";
 import {useNavigate} from 'react-router-dom'
+import StripeCheckout from "react-stripe-checkout";
 
 const PlaceOrderScreen = ({ }) => {
     const history=useNavigate();
@@ -37,19 +38,37 @@ const PlaceOrderScreen = ({ }) => {
   // const productprice= 
   // const totalprice=parseInt(productprice)+200
 
-  const placeOrderHandler = () => {
+
+  function onToken(token){
     dispatch(
-      createOrder({
-        orderItems: cart.cartItems,
-        shippingAddress: cart.shippingAddress,
-        paymentMethod: cart.paymentMethod,
-        itemsPrice: cart.productprice,
-        shippingPrice: cart.shippingPrice,
-        taxPrice: cart.taxPrice,
-        totalPrice: cart.totalPrice,
-      })
-    );
-  };
+          createOrder({
+            token,
+            orderItems: cart.cartItems,
+            shippingAddress: cart.shippingAddress,
+            paymentMethod: cart.paymentMethod,
+            itemsPrice: cart.productprice,
+            shippingPrice: cart.shippingPrice,
+            taxPrice: cart.taxPrice,
+            totalPrice: cart.totalPrice,
+          })
+        );
+
+
+
+  }
+  // const placeOrderHandler = () => {
+  //   dispatch(
+  //     createOrder({
+  //       orderItems: cart.cartItems,
+  //       shippingAddress: cart.shippingAddress,
+  //       paymentMethod: cart.paymentMethod,
+  //       itemsPrice: cart.productprice,
+  //       shippingPrice: cart.shippingPrice,
+  //       taxPrice: cart.taxPrice,
+  //       totalPrice: cart.totalPrice,
+  //     })
+  //   );
+  // };
 
   useEffect(() => {
     if (success) {
@@ -138,14 +157,34 @@ const PlaceOrderScreen = ({ }) => {
               <ListGroup.Item>
                 {error && <Message variant="danger">{error}</Message>}
               </ListGroup.Item>
-              <Button
+              <StripeCheckout
+        token={onToken}
+        // shippingAddress={cart.shippingAddress.address,
+        // cart.shippingAddress.city,
+        // cart.shippingAddress.postalcode,
+        // cart.shippingAddress.country}
+        shippingAddress
+        amount={cart.totalPrice*100}
+        currency='pkr'
+        stripeKey="pk_test_51L1FqRSEhdTePo5yWy3pZMXcn9AgQ6RQoUFsfi8Q1rH6Kln2e0iPtsWZ6DG7sIcmW5Fy5JUDjTr3m7mbgPoxeBwg00iOSeA4Gx"
+      > 
+      <Button
+                type="button"
+                className="btn-success"
+                disabled={cart.cartItems === 0}
+                // onClick={placeOrderHandler}
+              >
+                Place Order
+              </Button>
+      </StripeCheckout>
+              {/* <Button
                 type="button"
                 className="btn-success"
                 disabled={cart.cartItems === 0}
                 onClick={placeOrderHandler}
               >
                 Place Order
-              </Button>
+              </Button> */}
             </ListGroup>
           </Card>
         </Col>

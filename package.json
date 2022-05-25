@@ -28,10 +28,12 @@
     "react-player": "^2.10.1",
     "react-redux": "^8.0.1",
     "react-router-dom": "^6.0.2",
+    "react-stripe-checkout": "^2.6.3",
     "redux": "^4.2.0",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.1",
-    "stripe": "^9.2.0"
+    "stripe": "^9.4.0",
+    "uuid": "^8.3.2"
   },
   "name": "kitchen-garden",
   "version": "1.0.0",

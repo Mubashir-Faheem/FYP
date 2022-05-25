@@ -1,7 +1,8 @@
 
 const asyncHandler = require("express-async-handler");
 const Order = require("../models/OrderModel");
-
+const stripe=require('stripe')('sk_test_51L1FqRSEhdTePo5yi9b9HI4cFYIcLA3owztOTGOyXGqulAQxGtyZsKIX3wvaKWr2QYUpM5HrSQ5OdN11BQ7fWvdU00HWDW7ZS8')
+const{v4 :uuidv4}=require('uuid')
 const addOrderItem = asyncHandler(async (req, res) => {
   const {
     orderItems,
