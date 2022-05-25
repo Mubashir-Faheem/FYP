@@ -43,12 +43,12 @@ const RentingDetails = () => {
               ) : (
                   
                 <div>
-                <Link to="/homescreen " className="btn btn-dark">
+                <Link to="/renting " className="btn btn-dark">
                     <i class="fas fa-arrow-left"></i> &nbsp; Go Back
             </Link>
             
 <Row>
-            <Col md={5}>
+            <Col md={6}>
                                 
                                 <Card className="my-3 p-3 rounded"  style={{width:'440px',height:'440px'}}>
                 
@@ -71,7 +71,7 @@ const RentingDetails = () => {
                     </ListGroup>
                     </Card>
                     </Col>
-                    <Col style={{marginTop:'15px'}}>
+                    <Col md={3} style={{marginTop:'15px'}}>
                 <ListGroupItem>
                     
             {/* <ListGroupItem> */}
