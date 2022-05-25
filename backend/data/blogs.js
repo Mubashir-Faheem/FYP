@@ -2,7 +2,7 @@ const blogs =[
     {
     
     name:"Garden Weeds and Words",
-    image:'images/beauty_of_nature_17.jpg',
+    image:'images/blog.jpg',
     description:"This blog is a playful look at gardening from all angles by Andrew O’Brien. Recent blog posts have covered gardening clothes (as he posed the question of ‘do you ever garden wearing jeans?’ to his twitter audience) and a blog entitled ‘You snooze, you lose’- which was a fantastic post pointing out that February is NOT a time to rest in your garden.",
 
 },
