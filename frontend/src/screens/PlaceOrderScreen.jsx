@@ -51,7 +51,9 @@ const PlaceOrderScreen = ({ }) => {
             taxPrice: cart.taxPrice,
             totalPrice: cart.totalPrice,
           })
+        
         );
+        console.log(token)
 
 
 

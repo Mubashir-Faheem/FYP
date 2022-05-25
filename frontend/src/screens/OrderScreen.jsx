@@ -128,12 +128,12 @@ const history=useNavigate()
                 <strong>Method: </strong>
                 {order.paymentMethod}
               </p>
-              {/* {order.isPaid ? (
-                <Message variant='success'>Paid on {order.paidAt}</Message>
+              {order.isPaid ? (
+                <Message variant='success'>Paid  {order.paidAt}</Message>
               ) : (
-                <Message variant='danger'>Not Paid</Message>
-              )} */}
-              <Message variant='success'>Payment is done{order.paidAt}</Message>
+                <Message variant='success'>Paid</Message>
+              )}
+              {/* <Message variant='success'>Payment is done{order.paidAt}</Message> */}
             </ListGroup.Item>
 
             <ListGroup.Item>
