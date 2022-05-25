@@ -97,7 +97,11 @@ const PlaceOrderScreen = ({ }) => {
                           </Link>
                         </Col>
                         <Col md={4}>
-                          {item.qty} X Rs.{item.price} = Rs.{item.price}
+                          Items Selected:
+                         <strong> {item.qty} </strong>
+
+                         {/* X Rs.{item.price}  */}
+                          {/* = Rs.{item.price} */}
                         </Col>
                       </Row>
                     </ListGroup.Item>
