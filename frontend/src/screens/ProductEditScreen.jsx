@@ -115,7 +115,7 @@ const {id}=useParams()
               <Form.Control
                 type='name'
                 placeholder='Enter name'
-                value={name}
+                value={name} required
                 onChange={(e) => setName(e.target.value)}
               ></Form.Control>
             </Form.Group>
@@ -125,7 +125,7 @@ const {id}=useParams()
               <Form.Control
                 type='number'
                 placeholder='Enter price'
-                value={price}
+                value={price} required
                 onChange={(e) => setPrice(e.target.value)}
               ></Form.Control>
             </Form.Group>
@@ -137,7 +137,7 @@ const {id}=useParams()
                 type='text'
                 
                 placeholder='Enter image url'
-                value={image}
+                value={image} required
                 onChange={(e) => setImage(e.target.value)}
               ></Form.Control>
 
@@ -174,7 +174,7 @@ const {id}=useParams()
               <Form.Control
                 type='number'
                 placeholder='Enter countInStock'
-                value={countinstock}
+                value={countinstock} required
                 onChange={(e) => setcountinstock(e.target.value)}
               ></Form.Control>
             </Form.Group>
@@ -194,7 +194,7 @@ const {id}=useParams()
               <Form.Control
                 type='text'
                 placeholder='Enter description'
-                value={description}
+                value={description} required
                 onChange={(e) => setDescription(e.target.value)}
               ></Form.Control>
             </Form.Group>

@@ -95,27 +95,19 @@ const dispatch=useDispatch()
               <Form.Control
                 type='name'
                 placeholder='Enter title'
-                value={name}
+                value={name} required
                 onChange={(e) => setName(e.target.value)}
               ></Form.Control>
             </Form.Group>
 
-            {/* <Form.Group controlId='price'>
-              <Form.Label>Price</Form.Label>
-              <Form.Control
-                type='number'
-                placeholder='Enter price'
-                value={price}
-                onChange={(e) => setPrice(e.target.value)}
-              ></Form.Control>
-            </Form.Group> */}
+            
 
             <Form.Group controlId='image'>
               <Form.Label>Image</Form.Label>
               <Form.Control
                 type='text'
                 placeholder='Enter image url'
-                value={image}
+                value={image} required
                 onChange={(e) => setImage(e.target.value)}
               ></Form.Control>
               {/* <Form.File
@@ -127,46 +119,22 @@ const dispatch=useDispatch()
               {uploading && <Loader />}
             </Form.Group>
 
-            {/* <Form.Group controlId='brand'>
-              <Form.Label>Brand</Form.Label>
-              <Form.Control
-                type='text'
-                placeholder='Enter brand'
-                value={brand}
-                onChange={(e) => setBrand(e.target.value)}
-              ></Form.Control>
-            </Form.Group> */}
-
-            {/* <Form.Group controlId='countInStock'>
-              <Form.Label>Count In Stock</Form.Label>
-              <Form.Control
-                type='number'
-                placeholder='Enter countInStock'
-                value={countinstock}
-                onChange={(e) => setcountinstock(e.target.value)}
-              ></Form.Control>
-            </Form.Group> */}
-
-            {/* <Form.Group controlId='category'>
-              <Form.Label>Category</Form.Label>
-              <Form.Control
-                type='text'
-                placeholder='Enter category'
-                value={category}
-                onChange={(e) => setCategory(e.target.value)}
-              ></Form.Control>
-            </Form.Group> */}
+            <br />
 
             <Form.Group controlId='description'>
-              <Form.Label>Details</Form.Label>
-              <Form.Control
+              <Form.Label>Details:</Form.Label>
+              </Form.Group>
+               {/* <Form.Control  */}
+                <textarea style={{height:'200px', width:'400px'}} 
                 type='text'
                 placeholder='Enter details'
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-              ></Form.Control>
-            </Form.Group>
-
+                value={description} required
+                onChange={(e) => setDescription(e.target.value)} > 
+              
+              </textarea>
+              {/* </Form.Control> */}
+            
+            <br />
             <Button type='submit' variant='primary'>
               Update
             </Button>

@@ -36,9 +36,9 @@ let history=useNavigate();
             <Form.Control
               type="Text"
               placeholder="Enter Address"
-              value={address}
+              value={address} required
               onChange={(e) => setAddress(e.target.value)}
-              required
+              
             ></Form.Control>
           </Form.Group>
           <Form.Group controlId="city">
@@ -46,9 +46,9 @@ let history=useNavigate();
             <Form.Control
               type="Text"
               placeholder="Enter City"
-              value={city}
+              value={city} required
               onChange={(e) => setCity(e.target.value)}
-              required
+              
             ></Form.Control>
           </Form.Group>
           <Form.Group controlId="postalcode">
@@ -56,9 +56,9 @@ let history=useNavigate();
             <Form.Control
               type="Number"
               placeholder="Enter postalcode"
-              value={postalcode}
+              value={postalcode}required
               onChange={(e) => setPostalcode(e.target.value)}
-              required
+              
             ></Form.Control>
           </Form.Group>
           <Form.Group controlId="country">
@@ -66,9 +66,9 @@ let history=useNavigate();
             <Form.Control
               type="Text"
               placeholder="Enter Country"
-              value={country}
+              value={country}required
               onChange={(e) => setCountry(e.target.value)}
-              required
+              
             ></Form.Control>
           </Form.Group>
           <Button type="submit" variant="primary">

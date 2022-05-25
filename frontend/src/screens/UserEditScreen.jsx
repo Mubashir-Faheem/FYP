@@ -78,7 +78,7 @@ const history=useNavigate()
               <Form.Control
                 type='name'
                 placeholder='Enter name'
-                value={name}
+                value={name} required
                 onChange={(e) => setName(e.target.value)}
               ></Form.Control>
             </Form.Group>
@@ -88,7 +88,7 @@ const history=useNavigate()
               <Form.Control
                 type='email'
                 placeholder='Enter email'
-                value={email}
+                value={email} required
                 onChange={(e) => setEmail(e.target.value)}
               ></Form.Control>
             </Form.Group>
@@ -97,7 +97,7 @@ const history=useNavigate()
               <Form.Check
                 type='checkbox'
                 label='Is Admin'
-                checked={isAdmin}
+                checked={isAdmin} required
                 onChange={(e) => setIsAdmin(e.target.checked)}
               ></Form.Check>
             </Form.Group>

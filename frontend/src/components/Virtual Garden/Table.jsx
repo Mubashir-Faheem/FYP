@@ -107,7 +107,7 @@ const Table = ({ data }) => {
       </Card>
       </Col>
       <br />
-      <table id="myTable">
+      <table id="myTable" style={{backgroundColor:'rgb(71, 101, 71)'}}>
         {rows.map((row) => {
           return (
             <tr key={row}>

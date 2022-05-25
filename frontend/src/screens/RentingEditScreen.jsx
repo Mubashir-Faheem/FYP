@@ -119,7 +119,7 @@ const RentingEditScreen = () => {
               <Form.Control
                 type='name'
                 placeholder='Enter name'
-                value={name}
+                value={name} required
                 onChange={(e) => setName(e.target.value)}
               ></Form.Control>
             </Form.Group>
@@ -129,7 +129,7 @@ const RentingEditScreen = () => {
               <Form.Control
                 type='number'
                 placeholder='Enter price'
-                value={price}
+                value={price} required
                 onChange={(e) => setPrice(e.target.value)}
               ></Form.Control>
             </Form.Group>
@@ -139,7 +139,7 @@ const RentingEditScreen = () => {
               <Form.Control
                 type='text'
                 placeholder='Enter image url'
-                value={image}
+                value={image} required
                 onChange={(e) => setImage(e.target.value)}
               ></Form.Control>
               {/* <Form.File
@@ -166,7 +166,7 @@ const RentingEditScreen = () => {
               <Form.Control
                 type='number'
                 placeholder='Enter countInStock'
-                value={countinstock}
+                value={countinstock} required
                 onChange={(e) => setcountinstock(e.target.value)}
               ></Form.Control>
             </Form.Group>
@@ -186,7 +186,7 @@ const RentingEditScreen = () => {
               <Form.Control
                 type='text'
                 placeholder='Any extra tool required?'
-                value={tool}
+                value={tool} required
                 onChange={(e) => setTool(e.target.value)}
               ></Form.Control>
             </Form.Group>
