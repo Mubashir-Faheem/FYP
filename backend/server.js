@@ -2,6 +2,7 @@
 // import {useParams} from "react-router-dom"
 const express=require ('express');
 const cors=require ('cors')
+const morgan=require('morgan')
 // const {products}=require ("./data/products");
 const {errorHandler}=require("./middlewares/errorMiddleware")
 // const products=require ("./data/products");
@@ -22,11 +23,14 @@ const connectDb=require('./config/config');
 
 connectDb(); //connecting to mongodb
 
-// var param=express.useParam();
-// const { uuid } = require('uuidv4');
+// if(process.env.NODE_ENV==='development'){
+//     app.use(morgan())
+// }
+
 const app= express();
 app.use(express.json()); //middleware
 app.use(cors());
+
 
 //dotenv config
 // dotenv.config();
