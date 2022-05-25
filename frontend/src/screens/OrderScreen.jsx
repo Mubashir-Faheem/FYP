@@ -128,11 +128,12 @@ const history=useNavigate()
                 <strong>Method: </strong>
                 {order.paymentMethod}
               </p>
-              {order.isPaid ? (
+              {/* {order.isPaid ? (
                 <Message variant='success'>Paid on {order.paidAt}</Message>
               ) : (
                 <Message variant='danger'>Not Paid</Message>
-              )}
+              )} */}
+              <Message variant='success'>Payment is done{order.paidAt}</Message>
             </ListGroup.Item>
 
             <ListGroup.Item>
@@ -201,17 +202,18 @@ const history=useNavigate()
               </ListGroup.Item>
               {!order.isPaid && (
                 <ListGroup.Item>
-                  {loadingPay && <Loader />}
-                  {/* {!sdkReady ? (
+                  {/* {loadingPay && <Loader />}
+                  {!sdkReady ? (
                     <Loader />
                   ) : 
                   (
-                    <PayPalButton
+                    <Button
                       amount={order.totalPrice}
                       onSuccess={successPaymentHandler}
                     />
                   )
                   } */}
+                 
                 </ListGroup.Item>
               )}
               {loadingDeliver && <Loader />}

@@ -154,9 +154,10 @@ const PlaceOrderScreen = ({ }) => {
                   <Col>Rs.{cart.totalPrice}</Col>
                 </Row>
               </ListGroup.Item>
-              <ListGroup.Item>
+              {/* <ListGroup.Item>
                 {error && <Message variant="danger">{error}</Message>}
-              </ListGroup.Item>
+              </ListGroup.Item> */}
+              <br />
               <StripeCheckout
         token={onToken}
         // shippingAddress={cart.shippingAddress.address,
