@@ -47,13 +47,13 @@ const RentingDetails = () => {
                     <i class="fas fa-arrow-left"></i> &nbsp; Go Back
             </Link>
             
-
-            <Col md={6}>
+<Row>
+            <Col md={5}>
                                 
-                                <Card className="my-3 p-3 rounded">
+                                <Card className="my-3 p-3 rounded"  style={{width:'440px',height:'440px'}}>
                 
                             {/* <Image src={product &&product.image} alt={product && product.name} /> */}
-                            <Card.Img variant="top" src={`../${renting && renting.image}` }  />
+                            <Card.Img style={{width:'400px',height:'400px'}}variant="top" src={`../${renting && renting.image}` }  />
                             </Card> 
                         </Col>
             <Col md={3}>
@@ -66,19 +66,22 @@ const RentingDetails = () => {
                     Price:Rs. {renting &&renting.price} /hr
                     </ListGroupItem>
                     <ListGroupItem>
-                        {renting &&renting.tool}
+                       Tool Required: {renting &&renting.tool}
                     </ListGroupItem>
-                    
+                    </ListGroup>
+                    </Card>
+                    </Col>
+                    <Col style={{marginTop:'15px'}}>
                 <ListGroupItem>
                     
-            <ListGroupItem>
-                <Row>
+            {/* <ListGroupItem> */}
+                <Row >
                     <Col>Status:</Col>
                     <Col>{renting &&renting.countinstock > 0? "In Stock": "Out of Stock" }</Col>
                 </Row>
-                </ListGroupItem>
+                {/* </ListGroupItem> */}
                 {  renting.countinstock > 0 &&(
-                    <ListGroupItem>
+                    // <ListGroupItem>
                      <Row>
                          <Col style={{color:'red'}}>No. of Hours  
                          </Col>
@@ -94,18 +97,20 @@ const RentingDetails = () => {
                              }
                          </Form.Control>
                      </Row>
-                 </ListGroupItem>
+                //  </ListGroupItem>
                 )}
-                <ListGroupItem>
-                    <Button id="btn" className="btn-block" type="button" to="/CartScreen" onClick={addToCartHandler} >Add to Cart </Button>
+                <br />
+                {/* <ListGroupItem> */}
+                    <Button id="btn" className="btn-success " type="button" to="/CartScreen" onClick={addToCartHandler} >Rent Out </Button>
                     
                   
-                </ListGroupItem>
+                {/* </ListGroupItem> */}
                  </ListGroupItem>
-                 
+{/*                  
                 </ListGroup>
-                </Card>
+                </Card> */}
                 </Col>
+                </Row>
                 </div>
               )}
             

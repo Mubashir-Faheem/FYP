@@ -64,13 +64,13 @@ const addToCartHandler = ()=>{
                 <Link to="/homescreen " className="btn btn-dark">
                     <i class="fas fa-arrow-left"></i> &nbsp; Go Back
             </Link>
-                <Row>
-                 <Col md={6}>
+                <Row >
+                 <Col md={5}>
                                 
-                <Card className="my-3 p-3 rounded">
+                <Card className="my-3 p-3 rounded" style={{width:'440px',height:'440px'}}>
 
             {/* <Image src={product &&product.image} alt={product && product.name} /> */}
-            <Card.Img variant="top" src={`../${product && product.image}` }  />
+            <Card.Img  variant="top" style={{width:'400px',height:'400px'}} src={`../${product && product.image}` }  />
             </Card> 
         </Col>
         
@@ -97,7 +97,7 @@ const addToCartHandler = ()=>{
                 </Card>
         
         </Col>
-        <Col md={3}>
+        <Col md={3} style={{marginTop:'15px'}}>
     
             <ListGroupItem>
                 <Row>
