@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { savePaymentMethod } from "../actions/cartAction";
 import CheckoutStep from "../components/shared/CheckoutStep";
 import { useNavigate } from 'react-router-dom'
+import StripeCheckout from "react-stripe-checkout";
 
 const PaymentScreen = () => {
     const history=useNavigate(); 
@@ -13,12 +14,14 @@ const PaymentScreen = () => {
     history("/shipping");
   }
   const dispatch = useDispatch();
-  const [paymentMethod, setPaymentMethod] = useState("creditcard");
+  const [paymentMethod, setPaymentMethod] = useState("");
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(savePaymentMethod(paymentMethod));
     history("/placeorder");
   };
+
+  
   return (
     <>
       <CheckoutStep step1 step2 step3 />
@@ -27,23 +30,26 @@ const PaymentScreen = () => {
         <Form.Group>
           <Form.Label as="legend" style={{color:'#1D4B2C'}}>Select Payment Method</Form.Label>
           <Col>
+        
             <Form.Check
               type="radio"
               label="Credit Card"
               id="creditcard"
               name="paymentMethod"
-              value="creditcard" checked
+              value="creditcard" 
               onChange={(e) => setPaymentMethod(e.target.value)}
-            ></Form.Check>
+            >
+              
+            </Form.Check>
 
-{/* <Form.Check
+<Form.Check
               type="radio"
               label="Cash on Delivery"
               id="Cash"
               name="paymentMethod"
-              value="Cash" checked
+              value="Cash" 
               onChange={(e) => setPaymentMethod(e.target.value)}
-            ></Form.Check> */}
+            ></Form.Check>
           </Col>
         </Form.Group>
         <br />

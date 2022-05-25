@@ -58,19 +58,19 @@ const PlaceOrderScreen = ({ }) => {
 
 
   }
-  // const placeOrderHandler = () => {
-  //   dispatch(
-  //     createOrder({
-  //       orderItems: cart.cartItems,
-  //       shippingAddress: cart.shippingAddress,
-  //       paymentMethod: cart.paymentMethod,
-  //       itemsPrice: cart.productprice,
-  //       shippingPrice: cart.shippingPrice,
-  //       taxPrice: cart.taxPrice,
-  //       totalPrice: cart.totalPrice,
-  //     })
-  //   );
-  // };
+  const placeOrderHandler = () => {
+    dispatch(
+      createOrder({
+        orderItems: cart.cartItems,
+        shippingAddress: cart.shippingAddress,
+        paymentMethod: cart.paymentMethod,
+        itemsPrice: cart.productprice,
+        shippingPrice: cart.shippingPrice,
+        taxPrice: cart.taxPrice,
+        totalPrice: cart.totalPrice,
+      })
+    );
+  };
 
   useEffect(() => {
     if (success) {
@@ -160,6 +160,9 @@ const PlaceOrderScreen = ({ }) => {
                 {error && <Message variant="danger">{error}</Message>}
               </ListGroup.Item> */}
               <br />
+             
+
+              {cart.paymentMethod=='creditcard' ?(
               <StripeCheckout
         token={onToken}
         // shippingAddress={cart.shippingAddress.address,
@@ -179,7 +182,20 @@ const PlaceOrderScreen = ({ }) => {
               >
                 Place Order
               </Button>
-      </StripeCheckout>
+      </StripeCheckout>):(
+        <Button
+                type="button"
+                className="btn-success"
+                disabled={cart.cartItems === 0}
+                onClick={placeOrderHandler}
+                // onClick={onToken}
+              >
+                Place Order
+              </Button>
+      )
+      
+      }
+             
               {/* <Button
                 type="button"
                 className="btn-success"

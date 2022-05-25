@@ -131,7 +131,7 @@ const history=useNavigate()
               {order.isPaid ? (
                 <Message variant='success'>Paid  {order.paidAt}</Message>
               ) : (
-                <Message variant='success'>Paid</Message>
+                <Message variant='danger'>Not Paid</Message>
               )}
               {/* <Message variant='success'>Payment is done{order.paidAt}</Message> */}
             </ListGroup.Item>
