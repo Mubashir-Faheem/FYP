@@ -23,13 +23,17 @@ const connectDb=require('./config/config');
 
 connectDb(); //connecting to mongodb
 
-// if(process.env.NODE_ENV==='development'){
-//     app.use(morgan())
-// }
+// 
+
 
 const app= express();
 app.use(express.json()); //middleware
 app.use(cors());
+
+if(process.env.NODE_ENV==='development'){
+        app.use(morgan('dev'))
+    }
+
 
 
 //dotenv config
