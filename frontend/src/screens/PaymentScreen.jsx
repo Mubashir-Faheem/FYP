@@ -29,7 +29,7 @@ const PaymentScreen = () => {
           <Col>
             <Form.Check
               type="radio"
-              label="Debit or Credit Card"
+              label="Credit Card"
               id="creditcard"
               name="paymentMethod"
               value="creditcard" checked
