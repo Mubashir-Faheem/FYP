@@ -171,7 +171,7 @@ const PlaceOrderScreen = ({ }) => {
         // cart.shippingAddress.country}
         shippingAddress
         amount={cart.totalPrice*100}
-        currency='pkr'
+        currency='PKR'
         stripeKey="pk_test_51L1FqRSEhdTePo5yWy3pZMXcn9AgQ6RQoUFsfi8Q1rH6Kln2e0iPtsWZ6DG7sIcmW5Fy5JUDjTr3m7mbgPoxeBwg00iOSeA4Gx"
       > 
       <Button
